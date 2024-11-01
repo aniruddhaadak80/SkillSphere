@@ -10,7 +10,7 @@ Welcome to **SkillSphere**, a comprehensive web platform designed to empower use
 - [2. Mood-Based Recipe Recommender](#2-mood-based-recipe-recommender-%EF%B8%8F)
 - [3. Sustainable Product Comparison](#3-sustainable-product-comparison-)
 - [4. Personalized Skill Builder](#4-personalized-skill-builder-)
-- [5. Virtual Body Language Coach](#5-virtual-body-language-coach-)
+- [5. Virtual Body Language Coach](#5-virtual-body-language-coach-%EF%B8%8F)
 - [6. Crowdsourced Travel Recommendations](#6-crowdsourced-travel-recommendations-)
 - [7. Neighborhood Micro-Task Exchange](#7-neighborhood-micro-task-exchange-)
 - [8. Wellness Companion](#8-wellness-companion-)
