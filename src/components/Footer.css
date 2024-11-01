@@ -22,6 +22,28 @@
     margin-right: 20px; /* Space between sections */
 }
 
+/* Remove default list styles */
+.footer-list {
+    list-style-type: none; /* No bullets */
+    padding: 0; /* Remove padding */
+}
+
+/* Styling for links */
+.footer-link {
+    color: #ffffff; /* White link color */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    padding: 8px 0; /* Space between links */
+    display: block; /* Block display for full clickable area */
+    margin-bottom: 10px; /* Space between each link */
+}
+
+/* Hover effects for links */
+.footer-link:hover {
+    color: #ffdd57; /* Change color on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
 /* Styling for contact section */
 .contact-me {
     flex: 1; /* Allow to take up available space */
@@ -36,34 +58,12 @@
     letter-spacing: 1px; /* Space between letters */
 }
 
-/* Remove default list styles */
-.footer-list {
-    list-style-type: none; /* No bullets */
-    padding: 0; /* Remove padding */
-}
-
-/* Styling for links */
-.footer-link {
-    color: #ffffff; /* White link color */
-    text-decoration: none; /* No underline */
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-    padding: 8px 12px; /* Padding for clickable area */
-    border-radius: 4px; /* Rounded corners */
-}
-
-/* Hover effects for links */
-.footer-link:hover {
-    color: #ffdd57; /* Change color on hover */
-    background-color: rgba(255, 221, 87, 0.3); /* Light background on hover */
-    transform: translateY(-3px); /* Slight lift effect */
-}
-
 /* Contact form styles */
 .contact-form {
     display: flex; /* Flex for layout */
     flex-direction: column; /* Stack elements vertically */
     justify-content: center; /* Center form items */
-    align-items: flex-start; /* Align items to the start */
+    align-items: center; /* Center align items */
     margin: 10px 0; /* Spacing around form */
 }
 
@@ -106,6 +106,8 @@
     border-radius: 4px; /* Rounded corners */
     cursor: pointer; /* Pointer on hover */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    width: 100%; /* Full width for button */
+    margin-top: 10px; /* Space above button */
 }
 
 /* Hover effect for button */
