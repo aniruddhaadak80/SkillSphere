@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Footer.css'; // Importing the CSS file
-import { FaGithub } from 'react-icons/fa'; // Import GitHub icon
 
 const Footer = () => {
     const [email, setEmail] = useState('');
@@ -78,9 +77,9 @@ const Footer = () => {
                         href="https://github.com/aniruddhaadak80/SkillSphere" 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="footer-link github-link"
+                        className="footer-link"
                     >
-                        <FaGithub size={20} />
+                        SkillSphere
                     </a>
                 </p>
             </div>
