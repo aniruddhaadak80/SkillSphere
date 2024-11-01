@@ -5,23 +5,29 @@
     text-align: center;
     padding: 40px 20px; /* Increased padding for better spacing */
     border-top: 2px solid #ffffff; /* White top border for style */
-    position: relative;
 }
 
 /* Container for footer content */
 .footer-container {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out elements */
+    align-items: flex-start; /* Align items at the top */
+    flex-wrap: wrap; /* Allow items to wrap on small screens */
     margin-bottom: 20px; /* Spacing between sections */
 }
 
 /* Styling for quick links section */
 .quick-links {
-    margin-bottom: 20px;
+    flex: 1; /* Allow to take up available space */
+    margin-right: 20px; /* Space between sections */
 }
 
+/* Styling for contact section */
+.contact-me {
+    flex: 1; /* Allow to take up available space */
+}
+
+/* Title styles */
 .footer-title {
     font-size: 1.5rem; /* Larger font size for titles */
     font-weight: bold; /* Bold for emphasis */
@@ -52,17 +58,12 @@
     transform: translateY(-3px); /* Slight lift effect */
 }
 
-/* Styling for contact section */
-.contact-me {
-    margin-bottom: 20px;
-}
-
 /* Contact form styles */
 .contact-form {
     display: flex; /* Flex for layout */
     flex-direction: column; /* Stack elements vertically */
     justify-content: center; /* Center form items */
-    align-items: center; /* Align items vertically */
+    align-items: flex-start; /* Align items to the start */
     margin: 10px 0; /* Spacing around form */
 }
 
@@ -72,7 +73,6 @@
     flex-direction: column; /* Stack input elements */
     margin-bottom: 15px; /* Spacing between input fields */
     width: 100%; /* Full width */
-    max-width: 300px; /* Limit width */
 }
 
 /* Input styles */
@@ -134,19 +134,19 @@
 
 /* Delay animation for staggered effect */
 .footer-title {
-    animation-delay: 0.2s; /* Delay for title */
+    animation-delay: 0.1s; /* Delay for title */
 }
 .footer-link {
-    animation-delay: 0.3s; /* Delay for links */
+    animation-delay: 0.2s; /* Delay for links */
 }
 .contact-email {
-    animation-delay: 0.4s; /* Delay for email */
+    animation-delay: 0.3s; /* Delay for contact email */
 }
 .footer-bottom {
-    animation-delay: 0.5s; /* Delay for bottom text */
+    animation-delay: 0.4s; /* Delay for footer bottom */
 }
 
-/* Keyframes for fade-in effect */
+/* Fade in keyframes */
 @keyframes fadeIn {
     to {
         opacity: 1; /* Fade to visible */
