@@ -6,19 +6,19 @@ Welcome to **SkillSphere**, a comprehensive web platform designed to empower use
 
 ## 📚 Table of Contents
 
-- [1. Habit Tracker](#habit-tracker)
-- [2. Mood-Based Recipe Recommender](#mood-based-recipe-recommender)
-- [3. Sustainable Product Comparison](#sustainable-product-comparison)
-- [4. Personalized Skill Builder](#personalized-skill-builder)
-- [5. Virtual Body Language Coach](#virtual-body-language-coach)
-- [6. Crowdsourced Travel Recommendations](#crowdsourced-travel-recommendations)
-- [7. Neighborhood Micro-Task Exchange](#neighborhood-micro-task-exchange)
-- [8. Wellness Companion](#wellness-companion)
-- [9. AR Workspace Planner](#ar-workspace-planner)
-- [10. Live Skill Exchange Network](#live-skill-exchange-network)
-- [🚀 Getting Started](#getting-started)
-- [🤝 Contributing](#contributing)
-- [📝 License](#license)
+- [1. Habit Tracker](#1-habit-tracker)
+- [2. Mood-Based Recipe Recommender](#2-mood-based-recipe-recommender)
+- [3. Sustainable Product Comparison](#3-sustainable-product-comparison)
+- [4. Personalized Skill Builder](#4-personalized-skill-builder)
+- [5. Virtual Body Language Coach](#5-virtual-body-language-coach)
+- [6. Crowdsourced Travel Recommendations](#6-crowdsourced-travel-recommendations)
+- [7. Neighborhood Micro-Task Exchange](#7-neighborhood-micro-task-exchange)
+- [8. Wellness Companion](#8-wellness-companion)
+- [9. AR Workspace Planner](#9-ar-workspace-planner)
+- [10. Live Skill Exchange Network](#10-live-skill-exchange-network)
+- [🚀 Getting Started](#🚀-getting-started)
+- [🤝 Contributing](#🤝-contributing)
+- [📝 License](#📝-license)
 
 ---
 
