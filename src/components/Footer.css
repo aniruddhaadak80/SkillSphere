@@ -5,6 +5,12 @@
     text-align: center;
     padding: 40px 20px; /* Increased padding for better spacing */
     border-top: 2px solid #ffffff; /* White top border for style */
+    transition: transform 0.3s ease; /* Animation on hover */
+}
+
+/* Hover effect for footer */
+.footer:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
 }
 
 /* Container for footer content */
@@ -32,16 +38,17 @@
 .footer-link {
     color: #ffffff; /* White link color */
     text-decoration: none; /* No underline */
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-    padding: 8px 0; /* Space between links */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    padding: 8px; /* Reduced padding for closer links */
     display: block; /* Block display for full clickable area */
-    margin-bottom: 10px; /* Space between each link */
+    margin-bottom: 5px; /* Space between each link */
+    border-radius: 4px; /* Rounded corners */
 }
 
 /* Hover effects for links */
 .footer-link:hover {
-    color: #ffdd57; /* Change color on hover */
-    transform: translateY(-3px); /* Slight lift effect */
+    background-color: rgba(255, 221, 87, 0.3); /* Background color change on hover */
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
 /* Styling for contact section */
@@ -123,35 +130,30 @@
 
 /* Footer bottom section styles */
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.5); /* Top border for separation */
-    padding-top: 10px; /* Space above bottom text */
+    border-top: 1px solid rgba(255, 255, 255, 0.5); /* Light border for separation */
+    padding: 10px 0; /* Padding for spacing */
 }
 
-/* Animation for footer elements */
-.footer-title, .footer-link, .contact-email, .footer-bottom {
-    opacity: 0; /* Start invisible */
-    transform: translateY(20px); /* Move down */
-    animation: fadeIn 0.5s forwards; /* Animation for fade in */
+/* Footer bottom text styles */
+.footer-bottom p {
+    margin: 5px 0; /* Margin for spacing */
 }
 
-/* Delay animation for staggered effect */
-.footer-title {
-    animation-delay: 0.1s; /* Delay for title */
-}
-.footer-link {
-    animation-delay: 0.2s; /* Delay for links */
-}
-.contact-email {
-    animation-delay: 0.3s; /* Delay for contact email */
-}
-.footer-bottom {
-    animation-delay: 0.4s; /* Delay for footer bottom */
+/* GitHub link icon */
+.github-link {
+    color: #ffffff; /* White icon color */
+    margin-left: 5px; /* Space between text and icon */
 }
 
-/* Fade in keyframes */
-@keyframes fadeIn {
-    to {
-        opacity: 1; /* Fade to visible */
-        transform: translateY(0); /* Move to original position */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack on small screens */
+        align-items: center; /* Center items */
+    }
+
+    .quick-links, .contact-me {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Space below sections */
     }
 }
