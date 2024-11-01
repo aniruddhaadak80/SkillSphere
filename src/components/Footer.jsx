@@ -1,24 +1,31 @@
 import React, { useState } from 'react';
 import './Footer.css';
+import { FaEnvelope, FaPaperPlane, FaLink } from 'react-icons/fa'; // Importing icons
 
 const Footer = () => {
     const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
+    };
+
+    const handleMessageChange = (e) => {
+        setMessage(e.target.value);
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         alert(`Thank you for contacting us, ${email}!`);
         setEmail(''); // Clear input after submission
+        setMessage(''); // Clear message after submission
     };
 
     return (
         <footer className="footer">
             <div className="footer-container">
                 <div className="quick-links">
-                    <h3 className="footer-title">Quick Links</h3>
+                    <h3 className="footer-title">🌐 Quick Links</h3>
                     <ul className="footer-list">
                         <li><a href="#1-habit-tracker-" className="footer-link">Habit Tracker</a></li>
                         <li><a href="#2-mood-based-recipe-recommender-" className="footer-link">Mood-Based Recipe Recommender</a></li>
@@ -33,17 +40,31 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="contact-me">
-                    <h3 className="footer-title">Contact Me</h3>
+                    <h3 className="footer-title">📫 Contact Me</h3>
                     <form onSubmit={handleSubmit} className="contact-form">
-                        <input 
-                            type="email" 
-                            value={email} 
-                            onChange={handleEmailChange} 
-                            placeholder="Enter your email"
-                            required 
-                            className="email-input" 
-                        />
-                        <button type="submit" className="submit-button">Submit</button>
+                        <div className="input-group">
+                            <FaEnvelope className="input-icon" />
+                            <input 
+                                type="email" 
+                                value={email} 
+                                onChange={handleEmailChange} 
+                                placeholder="Enter your email"
+                                required 
+                                className="email-input" 
+                            />
+                        </div>
+                        <div className="input-group">
+                            <textarea 
+                                value={message} 
+                                onChange={handleMessageChange} 
+                                placeholder="Your message here..."
+                                required 
+                                className="message-input"
+                            />
+                        </div>
+                        <button type="submit" className="submit-button">
+                            <FaPaperPlane className="submit-icon" /> Submit
+                        </button>
                     </form>
                     <p className="contact-email">
                         Email: <a href="mailto:aniruddhaadak80@gmail.com" className="footer-link">aniruddhaadak80@gmail.com</a>
@@ -53,7 +74,7 @@ const Footer = () => {
             <div className="footer-bottom">
                 <p>&copy; 2024 Aniruddha Adak. All Rights Reserved.</p>
                 <p>
-                    GitHub Repository: <a href="https://github.com/aniruddhaadak80/SkillSphere" target="_blank" rel="noopener noreferrer" className="footer-link">SkillSphere</a>
+                    GitHub Repository: <a href="https://github.com/aniruddhaadak80/SkillSphere" target="_blank" rel="noopener noreferrer" className="footer-link"><FaLink /> SkillSphere</a>
                 </p>
             </div>
         </footer>
