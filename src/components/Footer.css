@@ -1,0 +1,57 @@
+/* Footer.css */
+.footer {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 24px;
+    border-top: 1px solid #ccc;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.quick-links {
+    margin-bottom: 16px;
+}
+
+.footer-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.footer-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-link {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #0056b3;
+    transform: scale(1.05);
+}
+
+.contact-me {
+    margin-bottom: 16px;
+}
+
+.contact-email {
+    margin-top: 8px;
+}
+
+.footer-bottom {
+    font-size: 0.875rem;
+}
+
+.footer-bottom p {
+    margin: 4px 0;
+}
