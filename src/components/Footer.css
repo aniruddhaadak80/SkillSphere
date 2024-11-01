@@ -58,9 +58,41 @@
     margin-bottom: 20px;
 }
 
-/* Email styling */
-.contact-email {
-    margin-top: 8px; /* Spacing above email */
+/* Contact form styles */
+.contact-form {
+    display: flex; /* Flex for layout */
+    justify-content: center; /* Center form items */
+    align-items: center; /* Align items vertically */
+    margin: 10px 0; /* Spacing around form */
+}
+
+.email-input {
+    padding: 10px; /* Padding inside the input */
+    border: 2px solid #61dafb; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    outline: none; /* Remove outline */
+    margin-right: 10px; /* Space between input and button */
+    transition: border-color 0.3s ease; /* Smooth transition for border */
+}
+
+.email-input:focus {
+    border-color: #21a1f1; /* Change border color on focus */
+}
+
+/* Submit button styles */
+.submit-button {
+    padding: 10px 15px; /* Button padding */
+    background-color: #61dafb; /* Button color */
+    color: #282c34; /* Button text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for button */
+.submit-button:hover {
+    background-color: #21a1f1; /* Darker blue on hover */
 }
 
 /* Bottom footer section */
