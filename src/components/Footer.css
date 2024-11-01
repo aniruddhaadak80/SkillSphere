@@ -1,57 +1,84 @@
 /* Footer.css */
 .footer {
-    background-color: #f9f9f9;
+    background-color: #282c34; /* Darker background for contrast */
+    color: #ffffff; /* White text for readability */
     text-align: center;
-    padding: 24px;
-    border-top: 1px solid #ccc;
+    padding: 40px 20px; /* Increased padding for better spacing */
+    border-top: 2px solid #61dafb; /* Blue top border for style */
+    position: relative;
 }
 
+/* Container for footer content */
 .footer-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 20px; /* Spacing between sections */
 }
 
+/* Styling for quick links section */
 .quick-links {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .footer-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 8px;
+    font-size: 1.5rem; /* Larger font size for titles */
+    font-weight: bold; /* Bold for emphasis */
+    margin-bottom: 12px; /* Spacing below title */
+    text-transform: uppercase; /* Uppercase for style */
+    letter-spacing: 1px; /* Space between letters */
+    color: #61dafb; /* Title color */
 }
 
+/* Remove default list styles */
 .footer-list {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; /* No bullets */
+    padding: 0; /* Remove padding */
 }
 
+/* Styling for links */
 .footer-link {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
+    color: #ffffff; /* White link color */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    padding: 8px 12px; /* Padding for clickable area */
+    border-radius: 4px; /* Rounded corners */
 }
 
+/* Hover effects for links */
 .footer-link:hover {
-    color: #0056b3;
-    transform: scale(1.05);
+    color: #61dafb; /* Change color on hover */
+    background-color: rgba(97, 218, 251, 0.2); /* Light background on hover */
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
+/* Styling for contact section */
 .contact-me {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
+/* Email styling */
 .contact-email {
-    margin-top: 8px;
+    margin-top: 8px; /* Spacing above email */
 }
 
+/* Bottom footer section */
 .footer-bottom {
-    font-size: 0.875rem;
+    font-size: 0.9rem; /* Slightly larger font for visibility */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle separator line */
+    padding-top: 12px; /* Spacing above text */
 }
 
-.footer-bottom p {
-    margin: 4px 0;
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row; /* Change to row on larger screens */
+        justify-content: space-around; /* Space out links and contact */
+    }
+
+    .quick-links, .contact-me {
+        margin-bottom: 0; /* Reset margin on larger screens */
+        width: 40%; /* Width for each section */
+    }
 }
