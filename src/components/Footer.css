@@ -5,12 +5,6 @@
     text-align: center;
     padding: 40px 20px; /* Increased padding for better spacing */
     border-top: 2px solid #ffffff; /* White top border for style */
-    transition: transform 0.3s ease; /* Animation on hover */
-}
-
-/* Hover effect for footer */
-.footer:hover {
-    transform: scale(1.01); /* Slightly scale up on hover */
 }
 
 /* Container for footer content */
@@ -38,7 +32,7 @@
 .footer-link {
     color: #ffffff; /* White link color */
     text-decoration: none; /* No underline */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
     padding: 8px; /* Reduced padding for closer links */
     display: block; /* Block display for full clickable area */
     margin-bottom: 5px; /* Space between each link */
@@ -48,7 +42,6 @@
 /* Hover effects for links */
 .footer-link:hover {
     background-color: rgba(255, 221, 87, 0.3); /* Background color change on hover */
-    transform: scale(1.05); /* Slight increase in size */
 }
 
 /* Styling for contact section */
@@ -89,7 +82,7 @@
     border-radius: 4px; /* Rounded corners */
     outline: none; /* Remove outline */
     width: 100%; /* Full width */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    transition: border-color 0.3s ease; /* Smooth transition */
 }
 
 /* Focus effect for input */
@@ -112,7 +105,7 @@
     border: none; /* No border */
     border-radius: 4px; /* Rounded corners */
     cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
     width: 100%; /* Full width for button */
     margin-top: 10px; /* Space above button */
 }
@@ -120,7 +113,6 @@
 /* Hover effect for button */
 .submit-button:hover {
     background-color: #ffd700; /* Darker yellow on hover */
-    transform: scale(1.05); /* Slight increase in size */
 }
 
 /* Contact email styling */
