@@ -1,11 +1,12 @@
 /* Footer.css */
 .footer {
-    background-color: #282c34; /* Darker background for contrast */
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
     color: #ffffff; /* White text for readability */
     text-align: center;
     padding: 40px 20px; /* Increased padding for better spacing */
-    border-top: 2px solid #61dafb; /* Blue top border for style */
+    border-top: 2px solid #ffffff; /* White top border for style */
     position: relative;
+    overflow: hidden; /* Hide overflow for animation */
 }
 
 /* Container for footer content */
@@ -28,7 +29,6 @@
     margin-bottom: 12px; /* Spacing below title */
     text-transform: uppercase; /* Uppercase for style */
     letter-spacing: 1px; /* Space between letters */
-    color: #61dafb; /* Title color */
 }
 
 /* Remove default list styles */
@@ -48,9 +48,9 @@
 
 /* Hover effects for links */
 .footer-link:hover {
-    color: #61dafb; /* Change color on hover */
-    background-color: rgba(97, 218, 251, 0.2); /* Light background on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    color: #ffdd57; /* Change color on hover */
+    background-color: rgba(255, 221, 87, 0.3); /* Light background on hover */
+    transform: translateY(-3px); /* Slight lift effect */
 }
 
 /* Styling for contact section */
@@ -66,39 +66,43 @@
     margin: 10px 0; /* Spacing around form */
 }
 
+/* Input field styles */
 .email-input {
     padding: 10px; /* Padding inside the input */
-    border: 2px solid #61dafb; /* Border color */
+    border: 2px solid #ffffff; /* White border */
     border-radius: 4px; /* Rounded corners */
     outline: none; /* Remove outline */
     margin-right: 10px; /* Space between input and button */
-    transition: border-color 0.3s ease; /* Smooth transition for border */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
+/* Focus effect for input */
 .email-input:focus {
-    border-color: #21a1f1; /* Change border color on focus */
+    border-color: #ffdd57; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(255, 221, 87, 0.5); /* Glow effect */
 }
 
 /* Submit button styles */
 .submit-button {
     padding: 10px 15px; /* Button padding */
-    background-color: #61dafb; /* Button color */
+    background-color: #ffdd57; /* Button color */
     color: #282c34; /* Button text color */
     border: none; /* No border */
     border-radius: 4px; /* Rounded corners */
     cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
 
 /* Hover effect for button */
 .submit-button:hover {
-    background-color: #21a1f1; /* Darker blue on hover */
+    background-color: #ffd700; /* Darker yellow on hover */
+    transform: scale(1.05); /* Slightly enlarge button */
 }
 
 /* Bottom footer section */
 .footer-bottom {
     font-size: 0.9rem; /* Slightly larger font for visibility */
-    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle separator line */
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Subtle separator line */
     padding-top: 12px; /* Spacing above text */
 }
 
@@ -112,5 +116,34 @@
     .quick-links, .contact-me {
         margin-bottom: 0; /* Reset margin on larger screens */
         width: 40%; /* Width for each section */
+    }
+}
+
+/* Animation effect for footer */
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    z-index: 0; /* Behind other elements */
+    animation: pulse 5s infinite; /* Pulse animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.1;
     }
 }
