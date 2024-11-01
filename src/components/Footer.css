@@ -6,6 +6,7 @@
     padding: 40px 20px; /* Increased padding for better spacing */
     border-top: 2px solid #ffffff; /* White top border for style */
     position: relative; /* Positioning for pseudo-elements */
+    overflow: hidden; /* Hide overflow for animations */
 }
 
 /* Container for footer content */
@@ -33,16 +34,19 @@
 .footer-link {
     color: #ffffff; /* White link color */
     text-decoration: none; /* No underline */
-    transition: background-color 0.3s ease; /* Smooth background color transition */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
     padding: 8px; /* Reduced padding for closer links */
     display: block; /* Block display for full clickable area */
     margin-bottom: 5px; /* Space between each link */
     border-radius: 4px; /* Rounded corners */
+    position: relative; /* For glowing effect */
 }
 
-/* Hover effects for links */
+/* Glowing effect and hover effects for links */
 .footer-link:hover {
     background-color: rgba(255, 221, 87, 0.3); /* Background color change on hover */
+    transform: scale(1.05); /* Slight scale effect */
+    box-shadow: 0 0 20px rgba(255, 221, 87, 0.8); /* Glowing effect */
 }
 
 /* Styling for contact section */
@@ -84,13 +88,13 @@
     border-radius: 4px; /* Rounded corners */
     outline: none; /* Remove outline */
     width: 100%; /* Full width */
-    transition: border-color 0.3s ease; /* Smooth transition */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
 /* Focus effect for input */
 .email-input:focus, .message-input:focus {
     border-color: #ffdd57; /* Change border color on focus */
-    box-shadow: 0 0 5px rgba(255, 221, 87, 0.5); /* Glow effect */
+    box-shadow: 0 0 8px rgba(255, 221, 87, 0.5); /* Glow effect */
 }
 
 /* Message input specific styles */
@@ -107,7 +111,7 @@
     border: none; /* No border */
     border-radius: 4px; /* Rounded corners */
     cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth background color transition */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
     width: 100%; /* Full width for button */
     margin-top: 10px; /* Space above button */
 }
@@ -115,6 +119,8 @@
 /* Hover effect for button */
 .submit-button:hover {
     background-color: #ffd700; /* Darker yellow on hover */
+    transform: scale(1.05); /* Slight scale effect */
+    box-shadow: 0 0 20px rgba(255, 221, 87, 0.8); /* Glowing effect */
 }
 
 /* Contact email styling */
@@ -198,5 +204,28 @@
     }
     100% {
         transform: translateY(0); /* Return to start */
+    }
+}
+
+/* Glowing star background animation */
+.footer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('path/to/star-background.png') repeat; /* Use your star background image */
+    opacity: 0.1; /* Light background */
+    z-index: 0; /* Below the content */
+    animation: twinkle 5s infinite alternate; /* Twinkle animation */
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0.3;
     }
 }
