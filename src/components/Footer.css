@@ -72,8 +72,11 @@
     display: flex;
     align-items: center; /* Align icon and input */
     margin-bottom: 15px; /* Spacing between input fields */
+    width: 100%; /* Full width */
+    max-width: 300px; /* Limit width */
 }
 
+/* Input icon styles */
 .input-icon {
     font-size: 1.5rem; /* Icon size */
     margin-right: 10px; /* Space between icon and input */
@@ -87,7 +90,7 @@
     border: 2px solid #ffffff; /* White border */
     border-radius: 4px; /* Rounded corners */
     outline: none; /* Remove outline */
-    width: 250px; /* Fixed width for inputs */
+    width: 100%; /* Full width */
     transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
@@ -119,7 +122,7 @@
 /* Hover effect for button */
 .submit-button:hover {
     background-color: #ffd700; /* Darker yellow on hover */
-    transform: scale(1.05); /* Slightly enlarge button */
+    transform: translateY(-2px); /* Lift effect */
 }
 
 /* Submit button icon */
@@ -127,16 +130,15 @@
     margin-right: 5px; /* Space between icon and text */
 }
 
-/* Bottom footer section */
-.footer-bottom {
-    font-size: 0.9rem; /* Slightly larger font for visibility */
-    border-top: 1px solid rgba(255, 255, 255, 0.5); /* Top border for separation */
-    padding-top: 10px; /* Space above bottom text */
-}
-
-/* Email contact styling */
+/* Contact email styling */
 .contact-email {
     margin-top: 10px; /* Space above email */
+}
+
+/* Footer bottom section styles */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.5); /* Top border for separation */
+    padding-top: 10px; /* Space above bottom text */
 }
 
 /* Animation for footer elements */
