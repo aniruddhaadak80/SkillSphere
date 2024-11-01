@@ -1,12 +1,11 @@
 /* Footer.css */
 .footer {
-    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+    background: linear-gradient(to right, #4A90E2, #50E3C2); /* Gradient background */
     color: #ffffff; /* White text for readability */
     text-align: center;
     padding: 40px 20px; /* Increased padding for better spacing */
     border-top: 2px solid #ffffff; /* White top border for style */
     position: relative;
-    overflow: hidden; /* Hide overflow for animation */
 }
 
 /* Container for footer content */
@@ -70,18 +69,10 @@
 /* Input field styles */
 .input-group {
     display: flex;
-    align-items: center; /* Align icon and input */
+    flex-direction: column; /* Stack input elements */
     margin-bottom: 15px; /* Spacing between input fields */
     width: 100%; /* Full width */
     max-width: 300px; /* Limit width */
-}
-
-/* Input icon styles */
-.input-icon {
-    font-size: 1.5rem; /* Icon size */
-    margin-right: 10px; /* Space between icon and input */
-    color: #ffdd57; /* Icon color */
-    transition: transform 0.3s ease; /* Animation for icon */
 }
 
 /* Input styles */
@@ -115,19 +106,12 @@
     border-radius: 4px; /* Rounded corners */
     cursor: pointer; /* Pointer on hover */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-    display: flex;
-    align-items: center; /* Center icon and text */
 }
 
 /* Hover effect for button */
 .submit-button:hover {
     background-color: #ffd700; /* Darker yellow on hover */
     transform: translateY(-2px); /* Lift effect */
-}
-
-/* Submit button icon */
-.submit-icon {
-    margin-right: 5px; /* Space between icon and text */
 }
 
 /* Contact email styling */
