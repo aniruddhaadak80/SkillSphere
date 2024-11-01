@@ -90,3 +90,6 @@ To get started with **SkillSphere**, clone the repository and install the necess
 git clone https://github.com/yourusername/skillsphere.git
 cd skillsphere
 pip install -r requirements.txt
+```
+## Contributing 🤝
+We welcome contributions! If you'd like to enhance SkillSphere, please fork the repository and submit a pull request with your improvements.
