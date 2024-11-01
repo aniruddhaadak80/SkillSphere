@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaPaperPlane, FaLink } from 'react-icons/fa'; // Importing icons
 import './Footer.css'; // Importing the CSS file
 
 const Footer = () => {
@@ -43,7 +42,6 @@ const Footer = () => {
                     <h3 className="footer-title">📫 Contact Me</h3>
                     <form onSubmit={handleSubmit} className="contact-form">
                         <div className="input-group">
-                            <FaEnvelope className="input-icon" />
                             <input 
                                 type="email" 
                                 value={email} 
@@ -63,7 +61,7 @@ const Footer = () => {
                             />
                         </div>
                         <button type="submit" className="submit-button">
-                            <FaPaperPlane className="submit-icon" /> Submit
+                            Submit ✈️
                         </button>
                     </form>
                     <p className="contact-email">
@@ -74,7 +72,7 @@ const Footer = () => {
             <div className="footer-bottom">
                 <p>&copy; 2024 Aniruddha Adak. All Rights Reserved.</p>
                 <p>
-                    GitHub Repository: <a href="https://github.com/aniruddhaadak80/SkillSphere" target="_blank" rel="noopener noreferrer" className="footer-link"><FaLink /> SkillSphere</a>
+                    GitHub Repository: <a href="https://github.com/aniruddhaadak80/SkillSphere" target="_blank" rel="noopener noreferrer" className="footer-link">SkillSphere</a>
                 </p>
             </div>
         </footer>
