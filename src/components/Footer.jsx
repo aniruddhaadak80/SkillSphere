@@ -32,12 +32,12 @@ const Footer = () => {
                         </div>
                         <button type="submit" className="submit-button">Submit</button>
                     </form>
-                    <div className="contact-email">Email: your.email@example.com</div>
+                    <div className="contact-email">Email: aniruddhaadak80@gmail.com</div>
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; 2024 Your Name. All rights reserved.</p>
-                <p>Follow me on <a href="https://github.com/your-repo" className="footer-link">GitHub</a></p>
+                <p>&copy; 2024 Aniruddha Adak. All rights reserved.</p>
+                <p>GitHub Repository: <a href="https://github.com/aniruddhaadak80/SkillSphere" className="footer-link">SkillSphere</a></p>
             </div>
         </footer>
     );
