@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './Footer.css';
 import { FaEnvelope, FaPaperPlane, FaLink } from 'react-icons/fa'; // Importing icons
+import './Footer.css'; // Importing the CSS file
 
 const Footer = () => {
     const [email, setEmail] = useState('');
