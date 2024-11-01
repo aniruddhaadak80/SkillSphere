@@ -1,10 +1,11 @@
 /* Footer.css */
 .footer {
-    background: #f8f9fa; /* Light background for the footer */
-    color: #343a40; /* Dark text for contrast */
-    text-align: center; /* Center text alignment */
-    padding: 20px; /* Padding around the footer */
-    border-top: 1px solid #dee2e6; /* Top border for separation */
+    background: linear-gradient(to right, #4A90E2, #50E3C2); /* Gradient background */
+    color: #ffffff; /* White text for readability */
+    text-align: center;
+    padding: 40px 20px; /* Increased padding for better spacing */
+    border-top: 2px solid #ffffff; /* White top border for style */
+    position: relative; /* Positioning for pseudo-elements */
 }
 
 /* Container for footer content */
@@ -13,6 +14,7 @@
     justify-content: space-between; /* Space out elements */
     align-items: flex-start; /* Align items at the top */
     flex-wrap: wrap; /* Allow items to wrap on small screens */
+    margin-bottom: 20px; /* Spacing between sections */
 }
 
 /* Styling for quick links section */
@@ -29,16 +31,18 @@
 
 /* Styling for links */
 .footer-link {
-    color: #007bff; /* Link color */
+    color: #ffffff; /* White link color */
     text-decoration: none; /* No underline */
-    transition: background-color 0.3s ease; /* Smooth transition */
-    padding: 8px 0; /* Padding for links */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    padding: 8px; /* Reduced padding for closer links */
     display: block; /* Block display for full clickable area */
+    margin-bottom: 5px; /* Space between each link */
+    border-radius: 4px; /* Rounded corners */
 }
 
-/* Hover effect for links */
+/* Hover effects for links */
 .footer-link:hover {
-    background-color: rgba(0, 123, 255, 0.1); /* Background color change on hover */
+    background-color: rgba(255, 221, 87, 0.3); /* Background color change on hover */
 }
 
 /* Styling for contact section */
@@ -51,6 +55,9 @@
     font-size: 1.5rem; /* Larger font size for titles */
     font-weight: bold; /* Bold for emphasis */
     margin-bottom: 12px; /* Spacing below title */
+    text-transform: uppercase; /* Uppercase for style */
+    letter-spacing: 1px; /* Space between letters */
+    position: relative; /* Position for animation */
 }
 
 /* Contact form styles */
@@ -59,6 +66,7 @@
     flex-direction: column; /* Stack elements vertically */
     justify-content: center; /* Center form items */
     align-items: center; /* Center align items */
+    margin: 10px 0; /* Spacing around form */
 }
 
 /* Input field styles */
@@ -66,14 +74,23 @@
     display: flex;
     flex-direction: column; /* Stack input elements */
     margin-bottom: 15px; /* Spacing between input fields */
+    width: 100%; /* Full width */
 }
 
 /* Input styles */
 .email-input, .message-input {
     padding: 10px; /* Padding inside the input */
-    border: 1px solid #ced4da; /* Light border */
+    border: 2px solid #ffffff; /* White border */
     border-radius: 4px; /* Rounded corners */
     outline: none; /* Remove outline */
+    width: 100%; /* Full width */
+    transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+/* Focus effect for input */
+.email-input:focus, .message-input:focus {
+    border-color: #ffdd57; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(255, 221, 87, 0.5); /* Glow effect */
 }
 
 /* Message input specific styles */
@@ -85,22 +102,29 @@
 /* Submit button styles */
 .submit-button {
     padding: 10px 15px; /* Button padding */
-    background-color: #007bff; /* Button color */
-    color: #ffffff; /* Button text color */
+    background-color: #ffdd57; /* Button color */
+    color: #282c34; /* Button text color */
     border: none; /* No border */
     border-radius: 4px; /* Rounded corners */
     cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    width: 100%; /* Full width for button */
+    margin-top: 10px; /* Space above button */
 }
 
 /* Hover effect for button */
 .submit-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #ffd700; /* Darker yellow on hover */
+}
+
+/* Contact email styling */
+.contact-email {
+    margin-top: 10px; /* Space above email */
 }
 
 /* Footer bottom section styles */
 .footer-bottom {
-    border-top: 1px solid #dee2e6; /* Light border for separation */
+    border-top: 1px solid rgba(255, 255, 255, 0.5); /* Light border for separation */
     padding: 10px 0; /* Padding for spacing */
 }
 
@@ -119,5 +143,60 @@
     .quick-links, .contact-me {
         margin-right: 0; /* Remove right margin */
         margin-bottom: 20px; /* Space below sections */
+    }
+}
+
+/* Animation for footer elements */
+.footer-title::before {
+    content: "🎈"; /* Emoji for the title */
+    display: inline-block;
+    margin-right: 10px; /* Space between emoji and text */
+    animation: bounce 1.5s infinite; /* Bounce animation */
+}
+
+.quick-links .footer-link::before {
+    content: "🔗"; /* Emoji for links */
+    display: inline-block;
+    margin-right: 5px; /* Space between emoji and text */
+    animation: rotate 3s infinite; /* Rotation animation */
+}
+
+.contact-me::before {
+    content: "📧"; /* Email emoji */
+    display: inline-block;
+    margin-right: 5px; /* Space between emoji and text */
+    animation: float 2s infinite; /* Floating animation */
+}
+
+/* Bounce animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Starting position */
+    }
+    50% {
+        transform: translateY(-10px); /* Bounce up */
+    }
+}
+
+/* Rotation animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg); /* Start position */
+    }
+    to {
+        transform: rotate(360deg); /* Complete rotation */
+    }
+}
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0); /* Start position */
+    }
+    50% {
+        transform: translateY(-5px); /* Float up */
+    }
+    100% {
+        transform: translateY(0); /* Return to start */
     }
 }
