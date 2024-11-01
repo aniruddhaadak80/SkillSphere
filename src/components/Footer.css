@@ -5,6 +5,7 @@
     text-align: center;
     padding: 40px 20px; /* Increased padding for better spacing */
     border-top: 2px solid #ffffff; /* White top border for style */
+    position: relative; /* Positioning for pseudo-elements */
 }
 
 /* Container for footer content */
@@ -56,6 +57,7 @@
     margin-bottom: 12px; /* Spacing below title */
     text-transform: uppercase; /* Uppercase for style */
     letter-spacing: 1px; /* Space between letters */
+    position: relative; /* Position for animation */
 }
 
 /* Contact form styles */
@@ -141,5 +143,60 @@
     .quick-links, .contact-me {
         margin-right: 0; /* Remove right margin */
         margin-bottom: 20px; /* Space below sections */
+    }
+}
+
+/* Animation for footer elements */
+.footer-title::before {
+    content: "🎈"; /* Emoji for the title */
+    display: inline-block;
+    margin-right: 10px; /* Space between emoji and text */
+    animation: bounce 1.5s infinite; /* Bounce animation */
+}
+
+.quick-links .footer-link::before {
+    content: "🔗"; /* Emoji for links */
+    display: inline-block;
+    margin-right: 5px; /* Space between emoji and text */
+    animation: rotate 3s infinite; /* Rotation animation */
+}
+
+.contact-me::before {
+    content: "📧"; /* Email emoji */
+    display: inline-block;
+    margin-right: 5px; /* Space between emoji and text */
+    animation: float 2s infinite; /* Floating animation */
+}
+
+/* Bounce animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Starting position */
+    }
+    50% {
+        transform: translateY(-10px); /* Bounce up */
+    }
+}
+
+/* Rotation animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg); /* Start position */
+    }
+    to {
+        transform: rotate(360deg); /* Complete rotation */
+    }
+}
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0); /* Start position */
+    }
+    50% {
+        transform: translateY(-5px); /* Float up */
+    }
+    100% {
+        transform: translateY(0); /* Return to start */
     }
 }
