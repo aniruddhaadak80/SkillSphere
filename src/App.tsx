@@ -12,6 +12,8 @@ import NeighborExchange from './pages/NeighborExchange';
 import Wellness from './pages/Wellness';
 import Workspace from './pages/Workspace';
 import SkillExchange from './pages/SkillExchange';
+import Footer from './components/Footer'; // Import the Footer component
+
 
 const App = () => {
   return (
@@ -33,8 +35,10 @@ const App = () => {
             <Route path="/skillexchange" element={<SkillExchange />} />
           </Routes>
         </main>
+         <Footer /> {/* Add the Footer component here */}
       </div>
     </Router>
+    
   );
 };
 
