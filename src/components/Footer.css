@@ -139,12 +139,6 @@
     margin: 5px 0; /* Margin for spacing */
 }
 
-/* GitHub link icon */
-.github-link {
-    color: #ffffff; /* White icon color */
-    margin-left: 5px; /* Space between text and icon */
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .footer-container {
