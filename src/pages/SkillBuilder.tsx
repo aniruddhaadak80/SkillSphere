@@ -15,86 +15,27 @@ interface Skill {
   buttonColor: string;
 }
 
-const SkillBuilder = () => {
-  // Skills with categories and unique colors
-  const [skills] = useState<Skill[]>([
-    {
-      id: '1',
-      name: 'Ethereum',
-      progress: 75,
-      level: 3,
-      category: 'Blockchain',
-      nextMilestone: 'Create Smart Contract',
-      color: 'bg-indigo-50',
-      textColor: 'text-indigo-700',
-      progressColor: 'bg-indigo-400',
-      buttonColor: 'bg-gradient-to-r from-indigo-400 to-indigo-600',
-    },
-    {
-      id: '2',
-      name: 'Bitcoin',
-      progress: 65,
-      level: 4,
-      category: 'Blockchain',
-      nextMilestone: 'Implement Blockchain',
-      color: 'bg-orange-50',
-      textColor: 'text-orange-700',
-      progressColor: 'bg-orange-400',
-      buttonColor: 'bg-gradient-to-r from-orange-400 to-orange-600',
-    },
-    {
-      id: '3',
-      name: 'TensorFlow',
-      progress: 90,
-      level: 5,
-      category: 'AI',
-      nextMilestone: 'Deploy Neural Network',
-      color: 'bg-green-50',
-      textColor: 'text-green-700',
-      progressColor: 'bg-green-400',
-      buttonColor: 'bg-gradient-to-r from-green-400 to-green-600',
-    },
-    {
-      id: '4',
-      name: 'React.js',
-      progress: 80,
-      level: 4,
-      category: 'Web Development',
-      nextMilestone: 'Build a Full-Stack App',
-      color: 'bg-blue-50',
-      textColor: 'text-blue-700',
-      progressColor: 'bg-blue-400',
-      buttonColor: 'bg-gradient-to-r from-blue-400 to-blue-600',
-    },
-    {
-      id: '5',
-      name: 'Cybersecurity',
-      progress: 70,
-      level: 3,
-      category: 'Cybersecurity',
-      nextMilestone: 'Pass CEH Exam',
-      color: 'bg-red-50',
-      textColor: 'text-red-700',
-      progressColor: 'bg-red-400',
-      buttonColor: 'bg-gradient-to-r from-red-400 to-red-600',
-    },
-    {
-      id: '6',
-      name: 'Ethical Hacking',
-      progress: 60,
-      level: 2,
-      category: 'Cybersecurity',
-      nextMilestone: 'Complete OWASP Training',
-      color: 'bg-teal-50',
-      textColor: 'text-teal-700',
-      progressColor: 'bg-teal-400',
-      buttonColor: 'bg-gradient-to-r from-teal-400 to-teal-600',
-    },
-    // Add more skills as needed...
-  ]);
+const categories = ['All', 'Programming', 'Blockchain', 'AI', 'Quantum Computing', 'Cybersecurity', 'App Development', 'Web Development'];
 
-  const categories = ['All', 'Blockchain', 'AI', 'Web Development', 'Cybersecurity'];
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+const SkillBuilder = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const skills: Skill[] = [
+    { id: '1', name: 'JavaScript', progress: 80, level: 4, category: 'Programming', nextMilestone: 'Build a Custom Library', color: 'bg-yellow-50', textColor: 'text-yellow-700', progressColor: 'bg-yellow-400', buttonColor: 'bg-gradient-to-r from-yellow-400 to-yellow-600' },
+    { id: '2', name: 'Ethereum', progress: 75, level: 3, category: 'Blockchain', nextMilestone: 'Create a DApp on Ethereum', color: 'bg-indigo-50', textColor: 'text-indigo-700', progressColor: 'bg-indigo-400', buttonColor: 'bg-gradient-to-r from-indigo-400 to-indigo-600' },
+    { id: '3', name: 'Jupyter Notebook', progress: 80, level: 4, category: 'AI', nextMilestone: 'Build an ML Model', color: 'bg-purple-50', textColor: 'text-purple-700', progressColor: 'bg-purple-400', buttonColor: 'bg-gradient-to-r from-purple-400 to-purple-600' },
+    { id: '4', name: 'Quantum Algorithms', progress: 50, level: 2, category: 'Quantum Computing', nextMilestone: 'Complete Qiskit Tutorial', color: 'bg-teal-50', textColor: 'text-teal-700', progressColor: 'bg-teal-400', buttonColor: 'bg-gradient-to-r from-teal-400 to-teal-600' },
+    { id: '5', name: 'Ethical Hacking', progress: 40, level: 2, category: 'Cybersecurity', nextMilestone: 'CEH Certification', color: 'bg-red-50', textColor: 'text-red-700', progressColor: 'bg-red-400', buttonColor: 'bg-gradient-to-r from-red-400 to-red-600' },
+    { id: '6', name: 'React Native', progress: 85, level: 4, category: 'App Development', nextMilestone: 'Launch an App', color: 'bg-cyan-50', textColor: 'text-cyan-700', progressColor: 'bg-cyan-400', buttonColor: 'bg-gradient-to-r from-cyan-400 to-cyan-600' },
+    { id: '7', name: 'Next.js', progress: 75, level: 3, category: 'Web Development', nextMilestone: 'Contribute to Open Source', color: 'bg-blue-50', textColor: 'text-blue-700', progressColor: 'bg-blue-400', buttonColor: 'bg-gradient-to-r from-blue-400 to-blue-600' },
+    { id: '8', name: 'Bitcoin', progress: 65, level: 3, category: 'Blockchain', nextMilestone: 'Implement Smart Contracts', color: 'bg-orange-50', textColor: 'text-orange-700', progressColor: 'bg-orange-400', buttonColor: 'bg-gradient-to-r from-orange-400 to-orange-600' },
+    { id: '9', name: 'TensorFlow', progress: 90, level: 5, category: 'AI', nextMilestone: 'Deploy a Neural Network', color: 'bg-green-50', textColor: 'text-green-700', progressColor: 'bg-green-400', buttonColor: 'bg-gradient-to-r from-green-400 to-green-600' },
+    { id: '10', name: 'Solidity', progress: 70, level: 4, category: 'Blockchain', nextMilestone: 'Create Smart Contracts', color: 'bg-indigo-50', textColor: 'text-indigo-700', progressColor: 'bg-indigo-400', buttonColor: 'bg-gradient-to-r from-indigo-400 to-indigo-600' },
+    { id: '11', name: 'Kubernetes', progress: 60, level: 3, category: 'App Development', nextMilestone: 'Deploy App on Kubernetes', color: 'bg-pink-50', textColor: 'text-pink-700', progressColor: 'bg-pink-400', buttonColor: 'bg-gradient-to-r from-pink-400 to-pink-600' },
+    { id: '12', name: 'Docker', progress: 80, level: 4, category: 'App Development', nextMilestone: 'Dockerize an Application', color: 'bg-yellow-50', textColor: 'text-yellow-700', progressColor: 'bg-yellow-400', buttonColor: 'bg-gradient-to-r from-yellow-400 to-yellow-600' },
+    { id: '13', name: 'C++', progress: 70, level: 3, category: 'Programming', nextMilestone: 'Complete Advanced C++', color: 'bg-gray-50', textColor: 'text-gray-700', progressColor: 'bg-gray-400', buttonColor: 'bg-gradient-to-r from-gray-400 to-gray-600' },
+    // Add additional skills as needed...
+  ];
 
   const filteredSkills = selectedCategory === 'All' ? skills : skills.filter(skill => skill.category === selectedCategory);
 
@@ -123,7 +64,6 @@ const SkillBuilder = () => {
         </div>
       </div>
 
-      {/* Skill Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredSkills.map((skill) => (
           <motion.div
