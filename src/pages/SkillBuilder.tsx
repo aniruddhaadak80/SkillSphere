@@ -15,7 +15,21 @@ interface Skill {
   buttonColor: string;
 }
 
-const categories = ['All', 'Programming', 'Blockchain', 'AI', 'Quantum Computing', 'Cybersecurity', 'App Development', 'Web Development'];
+const categories = [
+  'All',
+  'Programming',
+  'Blockchain',
+  'AI',
+  'Quantum Computing',
+  'Cybersecurity',
+  'App Development',
+  'Web Development',
+  'Version Control',
+  'Databases',
+  'Operating Systems',
+  'API Development',
+  'Design Tools',
+];
 
 const SkillBuilder = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -28,13 +42,19 @@ const SkillBuilder = () => {
     { id: '5', name: 'Ethical Hacking', progress: 40, level: 2, category: 'Cybersecurity', nextMilestone: 'CEH Certification', color: 'bg-red-50', textColor: 'text-red-700', progressColor: 'bg-red-400', buttonColor: 'bg-gradient-to-r from-red-400 to-red-600' },
     { id: '6', name: 'React Native', progress: 85, level: 4, category: 'App Development', nextMilestone: 'Launch an App', color: 'bg-cyan-50', textColor: 'text-cyan-700', progressColor: 'bg-cyan-400', buttonColor: 'bg-gradient-to-r from-cyan-400 to-cyan-600' },
     { id: '7', name: 'Next.js', progress: 75, level: 3, category: 'Web Development', nextMilestone: 'Contribute to Open Source', color: 'bg-blue-50', textColor: 'text-blue-700', progressColor: 'bg-blue-400', buttonColor: 'bg-gradient-to-r from-blue-400 to-blue-600' },
-    { id: '8', name: 'Bitcoin', progress: 65, level: 3, category: 'Blockchain', nextMilestone: 'Implement Smart Contracts', color: 'bg-orange-50', textColor: 'text-orange-700', progressColor: 'bg-orange-400', buttonColor: 'bg-gradient-to-r from-orange-400 to-orange-600' },
-    { id: '9', name: 'TensorFlow', progress: 90, level: 5, category: 'AI', nextMilestone: 'Deploy a Neural Network', color: 'bg-green-50', textColor: 'text-green-700', progressColor: 'bg-green-400', buttonColor: 'bg-gradient-to-r from-green-400 to-green-600' },
-    { id: '10', name: 'Solidity', progress: 70, level: 4, category: 'Blockchain', nextMilestone: 'Create Smart Contracts', color: 'bg-indigo-50', textColor: 'text-indigo-700', progressColor: 'bg-indigo-400', buttonColor: 'bg-gradient-to-r from-indigo-400 to-indigo-600' },
-    { id: '11', name: 'Kubernetes', progress: 60, level: 3, category: 'App Development', nextMilestone: 'Deploy App on Kubernetes', color: 'bg-pink-50', textColor: 'text-pink-700', progressColor: 'bg-pink-400', buttonColor: 'bg-gradient-to-r from-pink-400 to-pink-600' },
-    { id: '12', name: 'Docker', progress: 80, level: 4, category: 'App Development', nextMilestone: 'Dockerize an Application', color: 'bg-yellow-50', textColor: 'text-yellow-700', progressColor: 'bg-yellow-400', buttonColor: 'bg-gradient-to-r from-yellow-400 to-yellow-600' },
-    { id: '13', name: 'C++', progress: 70, level: 3, category: 'Programming', nextMilestone: 'Complete Advanced C++', color: 'bg-gray-50', textColor: 'text-gray-700', progressColor: 'bg-gray-400', buttonColor: 'bg-gradient-to-r from-gray-400 to-gray-600' },
-    // Add additional skills as needed...
+    { id: '8', name: 'Git', progress: 90, level: 5, category: 'Version Control', nextMilestone: 'Contribute to Open Source Projects', color: 'bg-green-50', textColor: 'text-green-700', progressColor: 'bg-green-400', buttonColor: 'bg-gradient-to-r from-green-400 to-green-600' },
+    { id: '9', name: 'GitHub', progress: 85, level: 4, category: 'Version Control', nextMilestone: 'Build a Personal Project on GitHub', color: 'bg-gray-50', textColor: 'text-gray-700', progressColor: 'bg-gray-400', buttonColor: 'bg-gradient-to-r from-gray-400 to-gray-600' },
+    { id: '10', name: 'Python', progress: 80, level: 4, category: 'Programming', nextMilestone: 'Complete a Data Science Project', color: 'bg-blue-50', textColor: 'text-blue-700', progressColor: 'bg-blue-400', buttonColor: 'bg-gradient-to-r from-blue-400 to-blue-600' },
+    { id: '11', name: 'TensorFlow', progress: 90, level: 5, category: 'AI', nextMilestone: 'Deploy a Neural Network', color: 'bg-green-50', textColor: 'text-green-700', progressColor: 'bg-green-400', buttonColor: 'bg-gradient-to-r from-green-400 to-green-600' },
+    { id: '12', name: 'Linux', progress: 70, level: 3, category: 'Operating Systems', nextMilestone: 'Master Linux Commands', color: 'bg-purple-50', textColor: 'text-purple-700', progressColor: 'bg-purple-400', buttonColor: 'bg-gradient-to-r from-purple-400 to-purple-600' },
+    { id: '13', name: 'Docker', progress: 80, level: 4, category: 'App Development', nextMilestone: 'Dockerize an Application', color: 'bg-yellow-50', textColor: 'text-yellow-700', progressColor: 'bg-yellow-400', buttonColor: 'bg-gradient-to-r from-yellow-400 to-yellow-600' },
+    { id: '14', name: 'Postman', progress: 75, level: 3, category: 'API Development', nextMilestone: 'Test a REST API', color: 'bg-cyan-50', textColor: 'text-cyan-700', progressColor: 'bg-cyan-400', buttonColor: 'bg-gradient-to-r from-cyan-400 to-cyan-600' },
+    { id: '15', name: 'Kali Linux', progress: 65, level: 3, category: 'Operating Systems', nextMilestone: 'Complete Security Training', color: 'bg-red-50', textColor: 'text-red-700', progressColor: 'bg-red-400', buttonColor: 'bg-gradient-to-r from-red-400 to-red-600' },
+    { id: '16', name: 'Redux', progress: 60, level: 3, category: 'Web Development', nextMilestone: 'Build a Complex React Application', color: 'bg-teal-50', textColor: 'text-teal-700', progressColor: 'bg-teal-400', buttonColor: 'bg-gradient-to-r from-teal-400 to-teal-600' },
+    { id: '17', name: 'SQL', progress: 85, level: 4, category: 'Databases', nextMilestone: 'Optimize SQL Queries', color: 'bg-orange-50', textColor: 'text-orange-700', progressColor: 'bg-orange-400', buttonColor: 'bg-gradient-to-r from-orange-400 to-orange-600' },
+    { id: '18', name: 'GraphQL', progress: 70, level: 3, category: 'API Development', nextMilestone: 'Learn Advanced Queries', color: 'bg-indigo-50', textColor: 'text-indigo-700', progressColor: 'bg-indigo-400', buttonColor: 'bg-gradient-to-r from-indigo-400 to-indigo-600' },
+    { id: '19', name: 'Canva', progress: 80, level: 4, category: 'Design Tools', nextMilestone: 'Create a Brand Kit', color: 'bg-pink-50', textColor: 'text-pink-700', progressColor: 'bg-pink-400', buttonColor: 'bg-gradient-to-r from-pink-400 to-pink-600' },
+    // Add more skills as needed...
   ];
 
   const filteredSkills = selectedCategory === 'All' ? skills : skills.filter(skill => skill.category === selectedCategory);
@@ -52,11 +72,7 @@ const SkillBuilder = () => {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-lg text-lg font-medium focus:outline-none transition-all duration-200 ${
-                selectedCategory === category
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white'
-              }`}
+              className={`px-4 py-2 rounded-lg text-lg font-medium focus:outline-none transition-all duration-200 ${selectedCategory === category ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white'}`}
             >
               {category}
             </button>
