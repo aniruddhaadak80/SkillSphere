@@ -198,16 +198,14 @@ const SkillBuilder = () => {
     { id: '94', name: 'PyTorch', progress: 85, level: 4, category: 'Machine Learning', nextMilestone: 'Deploy a Neural Network', color: 'bg-indigo-50', textColor: 'text-indigo-700', progressColor: 'bg-indigo-400', buttonColor: 'bg-gradient-to-r from-indigo-400 to-indigo-600' },
     { id: '95', name: 'Keras', progress: 80, level: 4, category: 'Machine Learning', nextMilestone: 'Train Deep Learning Models', color: 'bg-yellow-50', textColor: 'text-yellow-700', progressColor: 'bg-yellow-400', buttonColor: 'bg-gradient-to-r from-yellow-400 to-yellow-600' },
 
-   
-    // DevOps
-    { id: '96', name: 'Jenkins', progress: 85, level: 4, category: 'DevOps', nextMilestone: 'Set Up CI/CD Pipeline', color: 'bg-teal-50', textColor: 'text-teal-700', progressColor: 'bg-teal-400', buttonColor: 'bg-gradient-to-r from-teal-400 to-teal-600' },
-    { id: '97', name: 'Docker Compose', progress: 80, level: 4, category: 'DevOps', nextMilestone: 'Manage Multi-Container Docker Applications', color: 'bg-blue-50', textColor: 'text-blue-700', progressColor: 'bg-blue-400', buttonColor: 'bg-gradient-to-r from-blue-400 to-blue-600' },
-    { id: '98', name: 'Kubernetes', progress: 85, level: 4, category: 'DevOps', nextMilestone: 'Deploy Microservices with Kubernetes', color: 'bg-cyan-50', textColor: 'text-cyan-700', progressColor: 'bg-cyan-400', buttonColor: 'bg-gradient-to-r from-cyan-400 to-cyan-600' },
-  
     // App Development
-    { id: '99', name: 'Swift', progress: 75, level: 3, category: 'App Development', nextMilestone: 'Build an iOS Application', color: 'bg-green-50', textColor: 'text-green-700', progressColor: 'bg-green-400', buttonColor: 'bg-gradient-to-r from-green-400 to-green-600' },
-    { id: '100', name: 'Flutter', progress: 80, level: 4, category: 'App Development', nextMilestone: 'Develop Cross-Platform Mobile Apps', color: 'bg-pink-50', textColor: 'text-pink-700', progressColor: 'bg-pink-400', buttonColor: 'bg-gradient-to-r from-pink-400 to-pink-600' }
+    { id: '96', name: 'Swift', progress: 75, level: 3, category: 'App Development', nextMilestone: 'Build an iOS Application', color: 'bg-green-50', textColor: 'text-green-700', progressColor: 'bg-green-400', buttonColor: 'bg-gradient-to-r from-green-400 to-green-600' },
+    { id: '97', name: 'Flutter', progress: 80, level: 4, category: 'App Development', nextMilestone: 'Develop Cross-Platform Mobile Apps', color: 'bg-pink-50', textColor: 'text-pink-700', progressColor: 'bg-pink-400', buttonColor: 'bg-gradient-to-r from-pink-400 to-pink-600' },
 
+
+     // API development 
+    { id: '98', name: 'Postman', progress: 75, level: 3, category: 'API Development', nextMilestone: 'Test a REST API', color: 'bg-cyan-50', textColor: 'text-cyan-700', progressColor: 'bg-cyan-400', buttonColor: 'bg-gradient-to-r from-cyan-400 to-cyan-600' },
+    { id: '99', name: 'GraphQL', progress: 70, level: 3, category: 'API Development', nextMilestone: 'Learn Advanced Queries', color: 'bg-indigo-50', textColor: 'text-indigo-700', progressColor: 'bg-indigo-400', buttonColor: 'bg-gradient-to-r from-indigo-400 to-indigo-600' },
 
     // More skills can be added to reach 100 as needed...
 ];
