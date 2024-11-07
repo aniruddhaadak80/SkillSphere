@@ -29,6 +29,22 @@ const categories = [
   'Operating Systems',
   'API Development',
   'Design Tools',
+  'DevOps',
+'Cloud',
+'Mobile Development',
+'Game Development',
+'Networking',
+'AI & Machine Learning',
+'Data Science', 
+'Software Testing',
+'Web Design',
+'Project Management',
+'Business Intelligence',
+'Cloud Security',
+'Big Data',
+'Database Management',
+'IoT',
+'Machine Learning',
 ];
 
 const SkillBuilder = () => {
@@ -192,8 +208,8 @@ const SkillBuilder = () => {
     { id: '99', name: 'Swift', progress: 75, level: 3, category: 'App Development', nextMilestone: 'Build an iOS Application', color: 'bg-green-50', textColor: 'text-green-700', progressColor: 'bg-green-400', buttonColor: 'bg-gradient-to-r from-green-400 to-green-600' },
     { id: '100', name: 'Flutter', progress: 80, level: 4, category: 'App Development', nextMilestone: 'Develop Cross-Platform Mobile Apps', color: 'bg-pink-50', textColor: 'text-pink-700', progressColor: 'bg-pink-400', buttonColor: 'bg-gradient-to-r from-pink-400 to-pink-600' }
 
-   // API development 
-     { id: '101', name: 'Postman', progress: 75, level: 3, category: 'API Development', nextMilestone: 'Test a REST API', color: 'bg-cyan-50', textColor: 'text-cyan-700', progressColor: 'bg-cyan-400', buttonColor: 'bg-gradient-to-r from-cyan-400 to-cyan-600' },
+     // API development 
+    { id: '101', name: 'Postman', progress: 75, level: 3, category: 'API Development', nextMilestone: 'Test a REST API', color: 'bg-cyan-50', textColor: 'text-cyan-700', progressColor: 'bg-cyan-400', buttonColor: 'bg-gradient-to-r from-cyan-400 to-cyan-600' },
     { id: '102', name: 'GraphQL', progress: 70, level: 3, category: 'API Development', nextMilestone: 'Learn Advanced Queries', color: 'bg-indigo-50', textColor: 'text-indigo-700', progressColor: 'bg-indigo-400', buttonColor: 'bg-gradient-to-r from-indigo-400 to-indigo-600' },
 
 
