@@ -22,7 +22,7 @@ const categories = [
   'AI',
   'Quantum Computing',
   'Cybersecurity',
-  'App Development',
+  'Mobile Development',
   'Web Development',
   'Version Control',
   'Databases',
@@ -31,7 +31,6 @@ const categories = [
   'Design Tools',
   'DevOps',
 'Cloud',
-'Mobile Development',
 'Game Development',
 'Networking',
 'AI & Machine Learning',
@@ -92,8 +91,8 @@ const SkillBuilder = () => {
     { id: '28', name: 'Git', progress: 90, level: 5, category: 'Version Control', nextMilestone: 'Contribute to Open Source Projects', color: 'bg-green-50', textColor: 'text-green-700', progressColor: 'bg-green-400', buttonColor: 'bg-gradient-to-r from-green-400 to-green-600' },
     { id: '29', name: 'GitHub', progress: 85, level: 4, category: 'Version Control', nextMilestone: 'Build a Personal Project on GitHub', color: 'bg-gray-50', textColor: 'text-gray-700', progressColor: 'bg-gray-400', buttonColor: 'bg-gradient-to-r from-gray-400 to-gray-600' },
     
-   // App Development
-   { id: '30', name: 'React Native', progress: 85, level: 4, category: 'App Development', nextMilestone: 'Launch an App', color: 'bg-cyan-50', textColor: 'text-cyan-700', progressColor: 'bg-cyan-400', buttonColor: 'bg-gradient-to-r from-cyan-400 to-cyan-600' },
+   // Quantum Computing 
+    { id: '30', name: 'Quantum Algorithms', progress: 50, level: 2, category: 'Quantum Computing', nextMilestone: 'Complete Qiskit Tutorial', color: 'bg-teal-50', textColor: 'text-teal-700', progressColor: 'bg-teal-400', buttonColor: 'bg-gradient-to-r from-teal-400 to-teal-600' },
 
     // Design Tools
     { id: '31', name: 'Figma', progress: 85, level: 4, category: 'Design Tools', nextMilestone: 'Create Interactive Prototypes', color: 'bg-pink-50', textColor: 'text-pink-700', progressColor: 'bg-pink-400', buttonColor: 'bg-gradient-to-r from-pink-400 to-pink-600' },
@@ -120,9 +119,9 @@ const SkillBuilder = () => {
     { id: '46', name: 'Firebase', progress: 80, level: 4, category: 'Cloud', nextMilestone: 'Integrate Firebase with React', color: 'bg-teal-50', textColor: 'text-teal-700', progressColor: 'bg-teal-400', buttonColor: 'bg-gradient-to-r from-teal-400 to-teal-600' },
 
     // Mobile Development
-    { id: '47', name: 'React Native', progress: 85, level: 4, category: 'Mobile Development', nextMilestone: 'Build a Cross-Platform App', color: 'bg-green-50', textColor: 'text-green-700', progressColor: 'bg-green-400', buttonColor: 'bg-gradient-to-r from-green-400 to-green-600' },
-    { id: '48', name: 'Flutter', progress: 80, level: 4, category: 'Mobile Development', nextMilestone: 'Create an iOS/Android App with Flutter', color: 'bg-blue-50', textColor: 'text-blue-700', progressColor: 'bg-blue-400', buttonColor: 'bg-gradient-to-r from-blue-400 to-blue-600' },
-    { id: '49', name: 'Xamarin', progress: 75, level: 3, category: 'Mobile Development', nextMilestone: 'Build a Xamarin App', color: 'bg-yellow-50', textColor: 'text-yellow-700', progressColor: 'bg-yellow-400', buttonColor: 'bg-gradient-to-r from-yellow-400 to-yellow-600' },
+   { id: '47', name: 'React Native', progress: 85, level: 4, category: 'Mobile Development', nextMilestone: 'Launch an App', color: 'bg-cyan-50', textColor: 'text-cyan-700', progressColor: 'bg-cyan-400', buttonColor: 'bg-gradient-to-r from-cyan-400 to-cyan-600' },
+    { id: '48', name: 'Flutter', progress: 80, level: 4, category: 'Mobile Development', nextMilestone: 'Develop Cross-Platform Mobile Apps', color: 'bg-pink-50', textColor: 'text-pink-700', progressColor: 'bg-pink-400', buttonColor: 'bg-gradient-to-r from-pink-400 to-pink-600' },
+   { id: '49', name: 'Xamarin', progress: 75, level: 3, category: 'Mobile Development', nextMilestone: 'Build a Xamarin App', color: 'bg-yellow-50', textColor: 'text-yellow-700', progressColor: 'bg-yellow-400', buttonColor: 'bg-gradient-to-r from-yellow-400 to-yellow-600' },
 
     // Game Development
     { id: '50', name: 'Unity', progress: 90, level: 5, category: 'Game Development', nextMilestone: 'Develop a 2D Game', color: 'bg-pink-50', textColor: 'text-pink-700', progressColor: 'bg-pink-400', buttonColor: 'bg-gradient-to-r from-pink-400 to-pink-600' },
@@ -198,14 +197,13 @@ const SkillBuilder = () => {
     { id: '94', name: 'PyTorch', progress: 85, level: 4, category: 'Machine Learning', nextMilestone: 'Deploy a Neural Network', color: 'bg-indigo-50', textColor: 'text-indigo-700', progressColor: 'bg-indigo-400', buttonColor: 'bg-gradient-to-r from-indigo-400 to-indigo-600' },
     { id: '95', name: 'Keras', progress: 80, level: 4, category: 'Machine Learning', nextMilestone: 'Train Deep Learning Models', color: 'bg-yellow-50', textColor: 'text-yellow-700', progressColor: 'bg-yellow-400', buttonColor: 'bg-gradient-to-r from-yellow-400 to-yellow-600' },
 
-    // App Development
-    { id: '96', name: 'Swift', progress: 75, level: 3, category: 'App Development', nextMilestone: 'Build an iOS Application', color: 'bg-green-50', textColor: 'text-green-700', progressColor: 'bg-green-400', buttonColor: 'bg-gradient-to-r from-green-400 to-green-600' },
-    { id: '97', name: 'Flutter', progress: 80, level: 4, category: 'App Development', nextMilestone: 'Develop Cross-Platform Mobile Apps', color: 'bg-pink-50', textColor: 'text-pink-700', progressColor: 'bg-pink-400', buttonColor: 'bg-gradient-to-r from-pink-400 to-pink-600' },
+    // Mobile Development
+    { id: '96', name: 'Swift', progress: 75, level: 3, category: 'Mobile Development', nextMilestone: 'Build an iOS Application', color: 'bg-green-50', textColor: 'text-green-700', progressColor: 'bg-green-400', buttonColor: 'bg-gradient-to-r from-green-400 to-green-600' },
 
 
      // API development 
-    { id: '98', name: 'Postman', progress: 75, level: 3, category: 'API Development', nextMilestone: 'Test a REST API', color: 'bg-cyan-50', textColor: 'text-cyan-700', progressColor: 'bg-cyan-400', buttonColor: 'bg-gradient-to-r from-cyan-400 to-cyan-600' },
-    { id: '99', name: 'GraphQL', progress: 70, level: 3, category: 'API Development', nextMilestone: 'Learn Advanced Queries', color: 'bg-indigo-50', textColor: 'text-indigo-700', progressColor: 'bg-indigo-400', buttonColor: 'bg-gradient-to-r from-indigo-400 to-indigo-600' },
+    { id: '97', name: 'Postman', progress: 75, level: 3, category: 'API Development', nextMilestone: 'Test a REST API', color: 'bg-cyan-50', textColor: 'text-cyan-700', progressColor: 'bg-cyan-400', buttonColor: 'bg-gradient-to-r from-cyan-400 to-cyan-600' },
+    { id: '98', name: 'GraphQL', progress: 70, level: 3, category: 'API Development', nextMilestone: 'Learn Advanced Queries', color: 'bg-indigo-50', textColor: 'text-indigo-700', progressColor: 'bg-indigo-400', buttonColor: 'bg-gradient-to-r from-indigo-400 to-indigo-600' },
 
     // More skills can be added to reach 100 as needed...
 ];
