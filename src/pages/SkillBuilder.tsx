@@ -30,7 +30,11 @@ const SkillBuilder = () => {
     { id: '6', name: 'React Native', progress: 85, level: 4, category: 'App Development', nextMilestone: 'Launch an App', color: 'bg-cyan-50', textColor: 'text-cyan-700', progressColor: 'bg-cyan-400', buttonColor: 'bg-gradient-to-r from-cyan-400 to-cyan-600', icon: <i className="fab fa-react"></i> },
     { id: '7', name: 'Next.js', progress: 75, level: 3, category: 'Web Development', nextMilestone: 'Contribute to Open Source', color: 'bg-blue-50', textColor: 'text-blue-700', progressColor: 'bg-blue-400', buttonColor: 'bg-gradient-to-r from-blue-400 to-blue-600', icon: <i className="fab fa-node"></i> },
     { id: '8', name: 'Bitcoin', progress: 65, level: 3, category: 'Blockchain', nextMilestone: 'Implement Smart Contracts', color: 'bg-orange-50', textColor: 'text-orange-700', progressColor: 'bg-orange-400', buttonColor: 'bg-gradient-to-r from-orange-400 to-orange-600', icon: <i className="fab fa-bitcoin"></i> },
-    // Add additional skills as needed...
+    { id: '9', name: 'Node.js', progress: 60, level: 3, category: 'Programming', nextMilestone: 'Build API with Express.js', color: 'bg-green-50', textColor: 'text-green-700', progressColor: 'bg-green-400', buttonColor: 'bg-gradient-to-r from-green-400 to-green-600', icon: <i className="fab fa-node"></i> },
+    { id: '10', name: 'Kubernetes', progress: 70, level: 3, category: 'DevOps', nextMilestone: 'Deploy with Kubernetes', color: 'bg-teal-50', textColor: 'text-teal-700', progressColor: 'bg-teal-400', buttonColor: 'bg-gradient-to-r from-teal-400 to-teal-600', icon: <i className="fab fa-kubernetes"></i> },
+    { id: '11', name: 'GoLang', progress: 65, level: 3, category: 'Programming', nextMilestone: 'Build a Microservice', color: 'bg-blue-50', textColor: 'text-blue-700', progressColor: 'bg-blue-400', buttonColor: 'bg-gradient-to-r from-blue-400 to-blue-600', icon: <i className="fab fa-golang"></i> },
+    { id: '12', name: 'AWS', progress: 90, level: 4, category: 'Cloud', nextMilestone: 'Get AWS Certified', color: 'bg-purple-50', textColor: 'text-purple-700', progressColor: 'bg-purple-400', buttonColor: 'bg-gradient-to-r from-purple-400 to-purple-600', icon: <i className="fab fa-aws"></i> },
+    // Additional skills can be added as needed
   ];
 
   const filteredSkills = selectedCategory === 'All' ? skills : skills.filter(skill => skill.category === selectedCategory);
@@ -67,6 +71,9 @@ const SkillBuilder = () => {
             key={skill.id}
             layout
             className={`overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl ${skill.color} border border-transparent hover:border-${skill.textColor} bg-opacity-90`}
+            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            viewport={{ once: true }}
           >
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
@@ -97,22 +104,15 @@ const SkillBuilder = () => {
                 </div>
               </div>
 
-              <div className="space-y-3">
-                <div className="flex items-center space-x-2">
-                  <Book className="w-4 h-4 text-blue-500" />
-                  <span className="text-gray-600 dark:text-gray-300">{skill.category}</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Star className="w-4 h-4 text-yellow-500" />
-                  <span className="text-gray-600 dark:text-gray-300">Next: {skill.nextMilestone}</span>
-                </div>
+              <div className="mb-4">
+                <p className={`text-sm text-gray-600 dark:text-gray-300`}>Next Milestone: <span className="font-semibold">{skill.nextMilestone}</span></p>
               </div>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                className={`mt-4 w-full flex items-center justify-center py-2 text-white rounded-md ${skill.buttonColor}`}
+                className={`flex items-center justify-center py-2 px-4 text-sm font-medium text-white rounded-md ${skill.buttonColor}`}
               >
-                <span className="text-sm">Get Started</span>
+                <span>Get Started</span>
                 <ArrowRight className="w-5 h-5 ml-2" />
               </motion.button>
             </div>
