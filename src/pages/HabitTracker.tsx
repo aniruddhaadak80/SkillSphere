@@ -7,13 +7,24 @@ interface Habit {
   name: string;
   streak: number;
   completed: boolean;
+  color: string; // New property to hold the color for each habit
 }
 
 const HabitTracker = () => {
+  // Function to generate random color
+  const generateRandomColor = () => {
+    const colors = [
+      'bg-blue-200', 'bg-green-200', 'bg-yellow-200', 'bg-red-200',
+      'bg-purple-200', 'bg-pink-200', 'bg-indigo-200', 'bg-teal-200',
+      'bg-orange-200', 'bg-gray-200',
+    ];
+    return colors[Math.floor(Math.random() * colors.length)];
+  };
+
   const [habits, setHabits] = useState<Habit[]>([
-    { id: '1', name: 'Morning Meditation', streak: 5, completed: false },
-    { id: '2', name: 'Daily Exercise', streak: 3, completed: false },
-    { id: '3', name: 'Reading', streak: 7, completed: false },
+    { id: '1', name: 'Morning Meditation', streak: 5, completed: false, color: generateRandomColor() },
+    { id: '2', name: 'Daily Exercise', streak: 3, completed: false, color: generateRandomColor() },
+    { id: '3', name: 'Reading', streak: 7, completed: false, color: generateRandomColor() },
   ]);
 
   const [newHabit, setNewHabit] = useState('');
@@ -27,6 +38,7 @@ const HabitTracker = () => {
           name: newHabit,
           streak: 0,
           completed: false,
+          color: generateRandomColor(), // Assign random color to new habit
         },
       ]);
       setNewHabit('');
@@ -80,7 +92,7 @@ const HabitTracker = () => {
               key={habit.id}
               layout
               whileHover={{ scale: 1.05 }}
-              className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 flex items-center justify-between shadow-lg hover:shadow-xl transition-all duration-300"
+              className={`rounded-lg p-4 flex items-center justify-between shadow-lg hover:shadow-xl transition-all duration-300 ${habit.color}`}
             >
               <div className="flex items-center space-x-4">
                 <button
