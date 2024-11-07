@@ -68,7 +68,7 @@ const HabitTracker = () => {
           />
           <button
             onClick={addHabit}
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
           >
             <Plus className="w-5 h-5" />
           </button>
@@ -79,26 +79,37 @@ const HabitTracker = () => {
             <motion.div
               key={habit.id}
               layout
-              className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 flex items-center justify-between"
+              whileHover={{ scale: 1.05 }}
+              className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 flex items-center justify-between shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <div className="flex items-center space-x-4">
                 <button
                   onClick={() => toggleHabit(habit.id)}
                   className={`w-8 h-8 rounded-full flex items-center justify-center ${
                     habit.completed
-                      ? 'bg-green-500 text-white'
-                      : 'bg-gray-200 dark:bg-gray-600'
-                  }`}
+                      ? 'bg-green-500 text-white hover:bg-green-600'
+                      : 'bg-gray-200 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
+                  } transition-colors`}
                 >
-                  {habit.completed ? <Check className="w-5 h-5" /> : <X className="w-5 h-5" />}
+                  {habit.completed ? (
+                    <Check className="w-5 h-5" />
+                  ) : (
+                    <X className="w-5 h-5" />
+                  )}
                 </button>
-                <span className="text-gray-900 dark:text-white font-medium">
+                <span className="text-gray-900 dark:text-white font-medium transition-colors">
                   {habit.name}
                 </span>
               </div>
               <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
                 <TrendingUp className="w-4 h-4" />
-                <span>{habit.streak} days</span>
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {habit.streak} days
+                </motion.span>
               </div>
             </motion.div>
           ))}
