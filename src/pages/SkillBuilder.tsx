@@ -72,7 +72,7 @@ const SkillBuilder = () => {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-lg text-lg font-medium focus:outline-none transition-all duration-200 ${selectedCategory === category ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white'}`}
+              className={`px-4 py-2 rounded-lg text-lg font-medium focus:outline-none transition-all duration-200 ${selectedCategory === category ? 'bg-blue-600 text-white' : 'bg-transparent text-blue-600 hover:bg-blue-500 hover:text-white'}`}
             >
               {category}
             </button>
@@ -80,6 +80,7 @@ const SkillBuilder = () => {
         </div>
       </div>
 
+      {/* Skill Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredSkills.map((skill) => (
           <motion.div
@@ -87,25 +88,23 @@ const SkillBuilder = () => {
             layout
             className={`overflow-hidden rounded-lg shadow-lg ${skill.color} hover:scale-105 transition-transform duration-300`}
           >
-            <div className="p-6">
+            <div className="p-6" style={{ backgroundColor: `${skill.color}`, opacity: 0.8 }}>
               <div className="flex justify-between items-start mb-4">
                 <h3 className={`text-xl font-semibold ${skill.textColor}`}>
                   {skill.name}
                 </h3>
                 <span className="flex items-center space-x-1">
                   <Trophy className="w-5 h-5 text-yellow-500" />
-                  <span className="text-gray-600 dark:text-gray-300">
-                    Level {skill.level}
-                  </span>
+                  <span className="text-gray-600">{`Level ${skill.level}`}</span>
                 </span>
               </div>
 
               <div className="mb-4">
                 <div className="flex justify-between text-sm mb-2">
-                  <span className="text-gray-600 dark:text-gray-300">Progress</span>
-                  <span className="text-gray-600 dark:text-gray-300">{skill.progress}%</span>
+                  <span>{`Progress`}</span>
+                  <span>{`${skill.progress}%`}</span>
                 </div>
-                <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+                <div className="w-full bg-gray-200 rounded-full h-2">
                   <div
                     className={`rounded-full h-2 ${skill.progressColor}`}
                     style={{ width: `${skill.progress}%` }}
@@ -116,17 +115,17 @@ const SkillBuilder = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-2">
                   <Book className="w-4 h-4 text-blue-500" />
-                  <span className="text-gray-600 dark:text-gray-300">{skill.category}</span>
+                  <span>{skill.category}</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Star className="w-4 h-4 text-yellow-500" />
-                  <span className="text-gray-600 dark:text-gray-300">Next: {skill.nextMilestone}</span>
+                  <span>{`Next: ${skill.nextMilestone}`}</span>
                 </div>
               </div>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                className={`mt-4 w-full flex items-center justify-center space-x-2 text-white py-2 px-4 rounded-lg transition-all duration-200 ${skill.buttonColor} hover:bg-opacity-90`}
+                className={`mt-4 w-full flex items-center justify-center space-x-2 text-white py-2 px-4 rounded-lg transition-all duration-200 ${skill.buttonColor}`}
               >
                 <span>Continue Learning</span>
                 <ArrowRight className="w-4 h-4" />
