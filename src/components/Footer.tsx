@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'; // Import Link for client-side navigation
 import {
-    FaEnvelope, FaGithub, FaPaperPlane, FaRegSmile, FaTasks, FaHeart, FaRocket, FaLightbulb, FaUsers
+    FaEnvelope, FaGithub, FaPaperPlane, FaHeart, FaRocket, FaLightbulb
 } from 'react-icons/fa';
 import { IoMdRocket } from 'react-icons/io';
 import { Home, Activity, ChefHat, Leaf, Brain, Users, Map, HandHeart, Heart, LayoutDashboard, Share2 } from 'lucide-react';
@@ -35,9 +35,9 @@ const Footer = () => {
     const toggleDarkMode = () => {
         setIsDarkMode(!isDarkMode);
         if (!isDarkMode) {
-            document.documentElement.classList.add('dark'); // Add dark mode class
+            document.documentElement.classList.add('dark'); // Add dark mode class to html
         } else {
-            document.documentElement.classList.remove('dark'); // Remove dark mode class
+            document.documentElement.classList.remove('dark'); // Remove dark mode class from html
         }
     };
 
@@ -176,18 +176,18 @@ const Footer = () => {
             <motion.button
                 whileHover={{ scale: 1.1 }}
                 onClick={toggleDarkMode}
-                className="fixed bottom-8 right-8 p-3 bg-blue-600 text-white rounded-full hover:bg-blue-700"
+                className="fixed bottom-8 right-8 p-3 bg-blue-600 text-white rounded-full shadow-lg"
             >
-                <FaLightbulb />
+                <FaLightbulb className="text-xl" />
             </motion.button>
 
-            {/* Scroll to Top Button */}
+            {/* Jump to Top Button */}
             <motion.button
                 whileHover={{ scale: 1.1 }}
                 onClick={scrollToTop}
-                className="fixed bottom-20 right-8 p-3 bg-green-600 text-white rounded-full hover:bg-green-700"
+                className="fixed bottom-16 right-8 p-3 bg-blue-600 text-white rounded-full shadow-lg"
             >
-                <FaRocket />
+                <FaRocket className="text-xl" />
             </motion.button>
         </motion.footer>
     );
