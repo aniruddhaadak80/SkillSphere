@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Activity, Brain, Moon, Sun, Droplet, Flame, Cloud, Battery, Feather, Leaf, Wind } from 'lucide-react';
+ import { Heart, Activity, Brain, Moon, Sun, Smile ,Music, Droplet, Flame,Coffee, Star, Cloud, Battery, Feather, Leaf, Wind ,Zap} from 'lucide-react';
 
 interface WellnessMetric {
   id: string;
@@ -27,6 +27,14 @@ const Wellness = () => {
     { id: '11', category: 'Wind Exposure', value: 12, target: 20, unit: 'minutes', icon: Wind, colorClass: 'bg-cyan-500' },
     { id: '12', category: 'Mental Health', value: 80, target: 100, unit: '%', icon: Brain, colorClass: 'bg-pink-600' },
     { id: '13', category: 'Mood Tracking', value: 7, target: 10, unit: 'mood score', icon: Heart, colorClass: 'bg-red-500' },
+    { id: '14', category: 'Exercise', value: 30, target: 45, unit: 'minutes', icon: Flame, colorClass: 'bg-gradient-to-br from-red-400 to-yellow-500' },
+  { id: '15', category: 'Heart Health', value: 75, target: 80, unit: 'bpm', icon: Heart, colorClass: 'bg-gradient-to-br from-pink-400 to-red-500' },
+  { id: '16', category: 'Meditation', value: 20, target: 30, unit: 'minutes', icon: Smile, colorClass: 'bg-gradient-to-br from-indigo-400 to-blue-500' },
+  { id: '17', category: 'Productivity', value: 5, target: 8, unit: 'hours', icon: Coffee, colorClass: 'bg-gradient-to-br from-yellow-400 to-orange-500' },
+  { id: '18', category: 'Music Listening', value: 60, target: 90, unit: 'minutes', icon: Music, colorClass: 'bg-gradient-to-br from-teal-400 to-green-500' },
+  { id: '19', category: 'Energy Levels', value: 80, target: 100, unit: '%', icon: Zap, colorClass: 'bg-gradient-to-br from-lime-400 to-green-600' },
+  { id: '20', category: 'Outdoor Time', value: 40, target: 60, unit: 'minutes', icon: Leaf, colorClass: 'bg-gradient-to-br from-green-400 to-teal-500' },
+  { id: '21', category: 'Self-Care', value: 50, target: 60, unit: 'minutes', icon: Star, colorClass: 'bg-gradient-to-br from-purple-400 to-pink-500' },
   ]);
 
   return (
