@@ -96,7 +96,7 @@ const SkillBuilder = () => {
 
     // Design Tools
     { id: '31', name: 'Figma', progress: 85, level: 4, category: 'Design Tools', nextMilestone: 'Create Interactive Prototypes', color: 'bg-pink-50', textColor: 'text-pink-700', progressColor: 'bg-pink-400', buttonColor: 'bg-gradient-to-r from-pink-400 to-pink-600' },
-    { id: '32', name: 'Canva', progress: 80, level: 4, category: 'Design Tools', nextMilestone: 'Create a Brand Kit', color: 'bg-pink-50', textColor: 'text-pink-700', progressColor: 'bg-pink-400', buttonColor: 'bg-gradient-to-r from-pink-400 to-pink-600' },
+    { id: '32', name: 'Canva', progress: 80, level: 4, category: 'Design Tools', nextMilestone: 'Create a Brand Kit', color: 'bg-blue-50', textColor: 'text-blue-700', progressColor: 'bg-blue-400', buttonColor: 'bg-gradient-to-r from-blue-400 to-blue-600' },
 
     // Databases
     { id: '33', name: 'SQL', progress: 85, level: 4, category: 'Databases', nextMilestone: 'Optimize SQL Queries', color: 'bg-orange-50', textColor: 'text-orange-700', progressColor: 'bg-orange-400', buttonColor: 'bg-gradient-to-r from-orange-400 to-orange-600' },
