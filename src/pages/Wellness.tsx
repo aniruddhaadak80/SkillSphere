@@ -46,7 +46,7 @@ const Wellness = () => {
       className="max-w-7xl mx-auto"
     >
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
           Wellness Companion
         </h1>
 
@@ -59,12 +59,13 @@ const Wellness = () => {
               <motion.div
                 key={metric.id}
                 layout
-                className="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6"
+                whileHover={{ scale: 1.05 }}
+                className="bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-700 dark:to-blue-800 rounded-lg shadow-lg p-6"
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-3">
-                    <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
-                      <Icon className="w-6 h-6 text-blue-500" />
+                    <div className="p-2 bg-blue-200 dark:bg-blue-900 rounded-lg">
+                      <Icon className="w-6 h-6 text-blue-500 dark:text-blue-300" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                       {metric.category}
@@ -83,41 +84,49 @@ const Wellness = () => {
                     </span>
                   </div>
                   <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
-                    <div
+                    <motion.div
                       className="bg-blue-500 rounded-full h-2"
                       style={{ width: `${progress}%` }}
+                      initial={{ width: 0 }}
+                      animate={{ width: `${progress}%` }}
+                      transition={{ duration: 1 }}
                     />
                   </div>
                 </div>
 
                 <div className="text-2xl font-bold text-gray-900 dark:text-white">
-                  {metric.value} <span className="text-sm text-gray-500">{metric.unit}</span>
+                  {metric.value} <span className="text-sm text-gray-500 dark:text-gray-400">{metric.unit}</span>
                 </div>
               </motion.div>
             );
           })}
         </div>
 
-        <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg p-6 text-white">
+        <motion.div
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg p-6 text-white shadow-xl"
+        >
           <div className="flex items-center space-x-4 mb-4">
-            <Heart className="w-8 h-8" />
+            <Heart className="w-8 h-8 animate-pulse" />
             <h2 className="text-2xl font-bold">Daily Wellness Tips</h2>
           </div>
           <ul className="space-y-4">
-            <li className="flex items-start space-x-3">
+            <li className="flex items-start space-x-3 hover:translate-x-1 transition-transform duration-200">
               <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-white mt-2" />
-              <p>Take a 5-minute break every hour to stretch and move around</p>
+              <p>Take a 5-minute break every hour to stretch and move around.</p>
             </li>
-            <li className="flex items-start space-x-3">
+            <li className="flex items-start space-x-3 hover:translate-x-1 transition-transform duration-200">
               <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-white mt-2" />
-              <p>Practice deep breathing exercises when feeling stressed</p>
+              <p>Practice deep breathing exercises when feeling stressed.</p>
             </li>
-            <li className="flex items-start space-x-3">
+            <li className="flex items-start space-x-3 hover:translate-x-1 transition-transform duration-200">
               <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-white mt-2" />
-              <p>Stay hydrated by drinking water throughout the day</p>
+              <p>Stay hydrated by drinking water throughout the day.</p>
             </li>
           </ul>
-        </div>
+        </motion.div>
       </div>
     </motion.div>
   );
