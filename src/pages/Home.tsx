@@ -27,6 +27,14 @@ const apps = [
   { path: '/skillexchange', icon: Share2, title: 'Skill Exchange', color: 'bg-teal-500' },
 ];
 
+const getRandomDirection = () => {
+  const directions = [-1, 1]; // Up/Down or Left/Right
+  return {
+    x: directions[Math.floor(Math.random() * 2)] * Math.random() * 200, // Random horizontal direction
+    y: directions[Math.floor(Math.random() * 2)] * Math.random() * 200, // Random vertical direction
+  };
+};
+
 const Home = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -44,36 +52,39 @@ const Home = () => {
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {apps.map(({ path, icon: Icon, title, color }, index) => (
-          <motion.div
-            key={path}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            whileHover={{ scale: 1.05, rotate: 5 }} // Add scaling and rotation on hover
-            whileInView={{ opacity: 1 }} // Scroll effect
-            viewport={{ once: true }}
-          >
-            <Link
-              to={path}
-              className="block group hover:transform hover:scale-105 transition-all duration-300 ease-in-out"
+        {apps.map(({ path, icon: Icon, title, color }, index) => {
+          const direction = getRandomDirection();
+          return (
+            <motion.div
+              key={path}
+              initial={{ opacity: 0, x: direction.x, y: direction.y }}
+              animate={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ delay: index * 0.1, type: 'spring', stiffness: 100, damping: 25 }}
+              whileHover={{ scale: 1.05, rotate: 5 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
             >
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                <div className={`${color} p-6 flex items-center justify-center transition-all duration-300 ease-in-out`}>
-                  <Icon className="w-12 h-12 text-white group-hover:text-gray-900 transition-colors duration-300" />
+              <Link
+                to={path}
+                className="block group hover:transform hover:scale-105 transition-all duration-300 ease-in-out"
+              >
+                <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                  <div className={`${color} p-6 flex items-center justify-center transition-all duration-300 ease-in-out`}>
+                    <Icon className="w-12 h-12 text-white group-hover:text-gray-900 transition-colors duration-300" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-gray-900 transition-colors duration-300">
+                      {title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">
+                      Click to explore and get started
+                    </p>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-gray-900 transition-colors duration-300">
-                    {title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm">
-                    Click to explore and get started
-                  </p>
-                </div>
-              </div>
-            </Link>
-          </motion.div>
-        ))}
+              </Link>
+            </motion.div>
+          );
+        })}
       </div>
     </div>
   );
