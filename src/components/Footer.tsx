@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'; // Import Link for client-side navigation
 import {
-    FaEnvelope, FaGithub, FaPaperPlane, FaRegSmile, FaTasks, FaHeart, FaRocket, FaLightbulb, FaUsers
+    FaEnvelope, FaGithub, FaPaperPlane, FaRegSmile, FaTasks, FaHeart, FaRocket, FaLightbulb, FaMoon, FaUsers
 } from 'react-icons/fa';
 import { IoMdRocket } from 'react-icons/io';
 import { Home, Activity, ChefHat, Leaf, Brain, Users, Map, HandHeart, Heart, LayoutDashboard, Share2 } from 'lucide-react';
@@ -178,7 +178,7 @@ const Footer = () => {
                 onClick={toggleDarkMode}
                 className="fixed bottom-8 right-8 p-3 bg-blue-600 text-white rounded-full hover:bg-blue-700"
             >
-                <FaLightbulb />
+                {isDarkMode ? <FaMoon /> : <FaLightbulb />} {/* Toggle Icon */}
             </motion.button>
 
             {/* Scroll to Top Button */}
