@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import {
-    FaEnvelope, FaGithub, FaPaperPlane, FaLink, FaRegSmile, FaTasks, FaHeart, FaRocket, FaLightbulb, FaUsers
-} from 'react-icons/fa';
+import { FaHome, FaWalking, FaUtensils, FaLeaf, FaBrain, FaUsers, FaMapMarkedAlt, FaHandsHelping, FaHeartbeat, FaLaptopHouse, FaShareAlt } from 'react-icons/fa';
 import { IoMdRocket } from 'react-icons/io';
-import { Home, Activity, ChefHat, Leaf, Brain, Users, Map, HandHeart, Heart, LayoutDashboard, Share2 } from 'lucide-react';
 
 const Footer = () => {
     const [email, setEmail] = useState('');
@@ -52,17 +49,17 @@ const Footer = () => {
                     </h3>
                     <ul className="footer-list space-y-2">
                         {[
-                            { path: '/', label: 'Home', icon: <Home /> },
-                            { path: '/habit', label: 'Habit Tracker', icon: <Activity /> },
-                            { path: '/recipes', label: 'Recipes', icon: <ChefHat /> },
-                            { path: '/sustainability', label: 'Sustainability', icon: <Leaf /> },
-                            { path: '/skillbuilder', label: 'Skill Builder', icon: <Brain /> },
-                            { path: '/bodylanguage', label: 'Body Language', icon: <Users /> },
-                            { path: '/traveltips', label: 'Travel Tips', icon: <Map /> },
-                            { path: '/neighborexchange', label: 'Neighbor Exchange', icon: <HandHeart /> },
-                            { path: '/wellness', label: 'Wellness', icon: <Heart /> },
-                            { path: '/workspace', label: 'Workspace', icon: <LayoutDashboard /> },
-                            { path: '/skillexchange', label: 'Skill Exchange', icon: <Share2 /> }
+                            { path: '/', label: 'Home', icon: <FaHome /> },
+                            { path: '/habit', label: 'Habit Tracker', icon: <FaWalking /> },
+                            { path: '/recipes', label: 'Recipes', icon: <FaUtensils /> },
+                            { path: '/sustainability', label: 'Sustainability', icon: <FaLeaf /> },
+                            { path: '/skillbuilder', label: 'Skill Builder', icon: <FaBrain /> },
+                            { path: '/bodylanguage', label: 'Body Language', icon: <FaUsers /> },
+                            { path: '/traveltips', label: 'Travel Tips', icon: <FaMapMarkedAlt /> },
+                            { path: '/neighborexchange', label: 'Neighbor Exchange', icon: <FaHandsHelping /> },
+                            { path: '/wellness', label: 'Wellness', icon: <FaHeartbeat /> },
+                            { path: '/workspace', label: 'Workspace', icon: <FaLaptopHouse /> },
+                            { path: '/skillexchange', label: 'Skill Exchange', icon: <FaShareAlt /> }
                         ].map((link, index) => (
                             <motion.li
                                 key={index}
