@@ -44,6 +44,26 @@ const products: Product[] = [
     energyEfficiency: 'B',
     image: 'https://images.unsplash.com/photo-1617788138017-80ad40651399',
   },
+  {
+    id: '4',
+    name: 'Reusable Shopping Bag',
+    category: 'Accessories',
+    carbonFootprint: 1.2,
+    waterUsage: 10,
+    recyclable: true,
+    energyEfficiency: 'A',
+    image: 'https://images.unsplash.com/photo-1580910051071-1d32a3e752b4',
+  },
+  {
+    id: '5',
+    name: 'Biodegradable Plate Set',
+    category: 'Kitchen',
+    carbonFootprint: 3.0,
+    waterUsage: 30,
+    recyclable: false,
+    energyEfficiency: 'C',
+    image: 'https://images.unsplash.com/photo-1556912996-51e15fd2d88f',
+  },
 ];
 
 const Sustainability = () => {
@@ -55,6 +75,8 @@ const Sustainability = () => {
         ? prev.filter((productId) => productId !== id)
         : [...prev, id]
     );
+    // Vibration effect on selection toggle
+    navigator.vibrate(100);
   };
 
   const getImpactColor = (value: number, max: number) => {
@@ -80,16 +102,18 @@ const Sustainability = () => {
             <motion.div
               key={product.id}
               layout
-              className={`bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg border-2 ${
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg border-2 transition-all duration-300 ${
                 selectedProducts.includes(product.id)
-                  ? 'border-blue-500'
+                  ? 'border-blue-500 scale-105'
                   : 'border-transparent'
               }`}
             >
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover transition-transform duration-300 transform hover:scale-110"
               />
               <div className="p-4">
                 <div className="flex justify-between items-start mb-4">
@@ -169,9 +193,11 @@ const Sustainability = () => {
                   </div>
                 </div>
 
-                <button
+                <motion.button
                   onClick={() => toggleProduct(product.id)}
-                  className={`mt-4 w-full py-2 px-4 rounded-lg font-medium ${
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`mt-4 w-full py-2 px-4 rounded-lg font-medium transition-all duration-300 ${
                     selectedProducts.includes(product.id)
                       ? 'bg-blue-500 text-white'
                       : 'bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200'
@@ -180,7 +206,7 @@ const Sustainability = () => {
                   {selectedProducts.includes(product.id)
                     ? 'Selected for Comparison'
                     : 'Select for Comparison'}
-                </button>
+                </motion.button>
               </div>
             </motion.div>
           ))}
