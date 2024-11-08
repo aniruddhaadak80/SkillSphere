@@ -52,7 +52,7 @@ const products: Product[] = [
     waterUsage: 10,
     recyclable: true,
     energyEfficiency: 'A',
-    image: 'https://tinyurl.com/248omv7c',
+    image: 'https://tinyurl.com/27lwelve',
   },
   {
     id: '5',
