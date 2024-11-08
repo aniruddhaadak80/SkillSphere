@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom'; // Import Link for client-side navigation
 import {
-    FaEnvelope, FaGithub, FaPaperPlane, FaLink, FaRegSmile, FaTasks, FaHeart, FaRocket, FaLightbulb, FaUsers
+    FaEnvelope, FaGithub, FaPaperPlane, FaRegSmile, FaTasks, FaHeart, FaRocket, FaLightbulb, FaUsers
 } from 'react-icons/fa';
 import { IoMdRocket } from 'react-icons/io';
 import { Home, Activity, ChefHat, Leaf, Brain, Users, Map, HandHeart, Heart, LayoutDashboard, Share2 } from 'lucide-react';
@@ -11,17 +12,15 @@ const Footer = () => {
     const [message, setMessage] = useState('');
     const [isEmailValid, setIsEmailValid] = useState(true);
 
-    const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleEmailChange = (e) => {
         const value = e.target.value;
         setEmail(value);
         setIsEmailValid(/^\S+@\S+\.\S+$/.test(value));
     };
 
-    const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-        setMessage(e.target.value);
-    };
+    const handleMessageChange = (e) => setMessage(e.target.value);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         if (isEmailValid) {
             alert(`Thank you for contacting us, ${email}!`);
@@ -40,7 +39,6 @@ const Footer = () => {
             transition={{ duration: 1 }}
         >
             <div className="footer-container grid grid-cols-1 md:grid-cols-3 gap-8">
-                {/* Quick Links Section */}
                 <motion.div
                     className="quick-links"
                     initial={{ opacity: 0, x: -50 }}
@@ -69,9 +67,9 @@ const Footer = () => {
                                 whileHover={{ scale: 1.1, color: '#ffd700' }}
                                 transition={{ duration: 0.2 }}
                             >
-                                <a href={link.path} className="footer-link flex items-center gap-2">
+                                <Link to={link.path} className="footer-link flex items-center gap-2">
                                     {link.icon} {link.label}
-                                </a>
+                                </Link>
                             </motion.li>
                         ))}
                     </ul>
