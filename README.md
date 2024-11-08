@@ -93,3 +93,4 @@ pip install -r requirements.txt
 ```
 ## Contributing 🤝
 We welcome contributions! If you'd like to enhance SkillSphere, please fork the repository and submit a pull request with your improvements.
+For further information read our contribution guide 👉 [CONTRIBUTING.md](CONTRIBUTING.md)
