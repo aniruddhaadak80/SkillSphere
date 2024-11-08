@@ -11,6 +11,7 @@ const Footer = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [isEmailValid, setIsEmailValid] = useState(true);
+    const [isDarkMode, setIsDarkMode] = useState(false); // State for dark mode
 
     const handleEmailChange = (e) => {
         const value = e.target.value;
@@ -31,6 +32,22 @@ const Footer = () => {
         }
     };
 
+    const toggleDarkMode = () => {
+        setIsDarkMode(!isDarkMode);
+        if (!isDarkMode) {
+            document.documentElement.classList.add('dark'); // Add dark mode class
+        } else {
+            document.documentElement.classList.remove('dark'); // Remove dark mode class
+        }
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth', // Smooth scrolling
+        });
+    };
+
     return (
         <motion.footer
             className="footer bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-8 text-white"
@@ -49,7 +66,7 @@ const Footer = () => {
                         <IoMdRocket className="text-yellow-300" /> Quick Links
                     </h3>
                     <ul className="footer-list space-y-2">
-                        {[
+                        {[ 
                             { path: '/', label: 'Home', icon: <Home /> },
                             { path: '/habit', label: 'Habit Tracker', icon: <Activity /> },
                             { path: '/recipes', label: 'Recipes', icon: <ChefHat /> },
@@ -154,6 +171,24 @@ const Footer = () => {
                     </p>
                 </motion.div>
             </div>
+
+            {/* Light/Dark Mode Toggle */}
+            <motion.button
+                whileHover={{ scale: 1.1 }}
+                onClick={toggleDarkMode}
+                className="fixed bottom-8 right-8 p-3 bg-blue-600 text-white rounded-full hover:bg-blue-700"
+            >
+                <FaLightbulb />
+            </motion.button>
+
+            {/* Scroll to Top Button */}
+            <motion.button
+                whileHover={{ scale: 1.1 }}
+                onClick={scrollToTop}
+                className="fixed bottom-20 right-8 p-3 bg-green-600 text-white rounded-full hover:bg-green-700"
+            >
+                <FaRocket />
+            </motion.button>
         </motion.footer>
     );
 };
