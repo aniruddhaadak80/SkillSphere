@@ -33,6 +33,7 @@ const Wellness = () => {
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="max-w-7xl mx-auto">
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-8">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Wellness Companion</h1>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {metrics.map((metric) => {
             const Icon = metric.icon;
@@ -42,7 +43,7 @@ const Wellness = () => {
               <motion.div
                 key={metric.id}
                 layout
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05, rotate: [0, 2, -2, 0] }}
                 className={`rounded-lg shadow-lg p-6 ${metric.colorClass} bg-opacity-10 dark:bg-opacity-20`}
               >
                 <div className="flex items-center justify-between mb-4">
@@ -80,6 +81,40 @@ const Wellness = () => {
             );
           })}
         </div>
+
+        <motion.div
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg p-6 text-white shadow-xl"
+        >
+          <div className="flex items-center space-x-4 mb-4">
+            <Heart className="w-8 h-8 animate-pulse" />
+            <h2 className="text-2xl font-bold">Daily Wellness Tips</h2>
+          </div>
+          <ul className="space-y-4">
+            <li className="flex items-start space-x-3 hover:translate-x-1 transition-transform duration-200">
+              <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-white mt-2" />
+              <p>Take a 5-minute break every hour to stretch and move around.</p>
+            </li>
+            <li className="flex items-start space-x-3 hover:translate-x-1 transition-transform duration-200">
+              <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-white mt-2" />
+              <p>Practice deep breathing exercises when feeling stressed.</p>
+            </li>
+            <li className="flex items-start space-x-3 hover:translate-x-1 transition-transform duration-200">
+              <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-white mt-2" />
+              <p>Stay hydrated by drinking water throughout the day.</p>
+            </li>
+            <li className="flex items-start space-x-3 hover:translate-x-1 transition-transform duration-200">
+              <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-white mt-2" />
+              <p>Engage in mindfulness or meditation for at least 10 minutes.</p>
+            </li>
+            <li className="flex items-start space-x-3 hover:translate-x-1 transition-transform duration-200">
+              <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-white mt-2" />
+              <p>Get some sunlight in the morning to boost your mood.</p>
+            </li>
+          </ul>
+        </motion.div>
       </div>
     </motion.div>
   );
