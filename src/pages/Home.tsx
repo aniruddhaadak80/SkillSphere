@@ -50,17 +50,20 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
+            whileHover={{ scale: 1.05, rotate: 5 }} // Add scaling and rotation on hover
+            whileInView={{ opacity: 1 }} // Scroll effect
+            viewport={{ once: true }}
           >
             <Link
               to={path}
-              className="block group hover:transform hover:scale-105 transition-all duration-200"
+              className="block group hover:transform hover:scale-105 transition-all duration-300 ease-in-out"
             >
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                <div className={`${color} p-6 flex items-center justify-center`}>
-                  <Icon className="w-12 h-12 text-white" />
+                <div className={`${color} p-6 flex items-center justify-center transition-all duration-300 ease-in-out`}>
+                  <Icon className="w-12 h-12 text-white group-hover:text-gray-900 transition-colors duration-300" />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-gray-900 transition-colors duration-300">
                     {title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 text-sm">
