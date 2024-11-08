@@ -77,6 +77,7 @@ const HabitTracker = () => {
             type="text"
             value={newHabit}
             onChange={(e) => setNewHabit(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && addHabit()} // Add this line to handle "Enter" key press
             placeholder="Add a new habit..."
             className="flex-1 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
