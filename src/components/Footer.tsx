@@ -73,53 +73,68 @@ const Footer = () => {
                     </ul>
                 </motion.div>
 
-                {/* Contact Me Section */}
-                <motion.div
-                    className="contact-me"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.5 }}
-                >
-                    <h3 className="footer-title text-xl font-bold mb-4 flex items-center gap-2">
-                        <FaEnvelope className="text-blue-300" /> Contact Me
-                    </h3>
-                    <form onSubmit={handleSubmit} className="contact-form space-y-4">
-                        <label className="block text-sm font-medium">
-                            Email:
-                        </label>
-                        <div className="input-group">
-                            <input
-                                type="email"
-                                value={email}
-                                onChange={handleEmailChange}
-                                placeholder="Enter your email"
-                                required
-                                className={`email-input w-full p-2 rounded-md focus:outline-none focus:ring-2 ${isEmailValid ? 'focus:ring-blue-400' : 'focus:ring-red-500 border-red-500'}`}
-                            />
-                            {!isEmailValid && (
-                                <p className="text-red-500 text-sm mt-1">Please enter a valid email address.</p>
-                            )}
-                        </div>
-                        <div className="input-group">
-                            <textarea
-                                value={message}
-                                onChange={handleMessageChange}
-                                placeholder="Your message here..."
-                                required
-                                className="message-input w-full p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-                            />
-                        </div>
-                        <button
-                            type="submit"
-                            className="submit-button flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
-                        >
-                            <FaPaperPlane /> Submit
-                        </button>
-                    </form>
-                    <p className="contact-email mt-4">
-                        Email: <a href="mailto:aniruddhaadak80@gmail.com" className="footer-link underline hover:text-yellow-300">aniruddhaadak80@gmail.com</a>
-                    </p>
-                </motion.div>
+               {/* Contact Me Section */}
+<motion.div
+    className="contact-me"
+    initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ delay: 0.5 }}
+>
+    <h3 className="footer-title text-xl font-bold mb-4 flex items-center gap-2">
+        <FaEnvelope className="text-blue-300" /> Contact Me
+    </h3>
+    <form onSubmit={handleSubmit} className="contact-form space-y-4">
+        {/* Email Input with Icon */}
+        <label className="block text-sm font-medium flex items-center gap-2">
+            <FaEnvelope className="text-blue-500" /> Email:
+        </label>
+        <div className="input-group flex items-center gap-2 bg-gray-100 dark:bg-gray-700 rounded-md p-2">
+            <input
+                type="email"
+                value={email}
+                onChange={handleEmailChange}
+                placeholder="Enter your email"
+                required
+                className={`email-input w-full p-2 rounded-md focus:outline-none bg-transparent text-gray-800 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400 ${
+                    isEmailValid ? 'focus:ring-2 focus:ring-blue-400' : 'focus:ring-2 focus:ring-red-500 border-red-500'
+                }`}
+            />
+            {!isEmailValid && (
+                <p className="text-red-500 text-sm mt-1">Please enter a valid email address.</p>
+            )}
+        </div>
+        
+        {/* Message Input with Icon */}
+        <label className="block text-sm font-medium flex items-center gap-2">
+            <FaPaperPlane className="text-green-500" /> Message:
+        </label>
+        <div className="input-group flex items-center gap-2 bg-gray-100 dark:bg-gray-700 rounded-md p-2">
+            <textarea
+                value={message}
+                onChange={handleMessageChange}
+                placeholder="Your message here..."
+                required
+                className="message-input w-full p-2 rounded-md focus:outline-none bg-transparent text-gray-800 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-green-400"
+            />
+        </div>
+
+        {/* Submit Button with Animation and Hover Effect */}
+        <motion.button
+            whileHover={{ scale: 1.1, backgroundColor: '#3b82f6' }}
+            transition={{ duration: 0.2 }}
+            type="submit"
+            className="submit-button flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+        >
+            <FaPaperPlane /> Submit
+        </motion.button>
+    </form>
+    
+    {/* Contact Email */}
+    <p className="contact-email mt-4">
+        Email: <a href="mailto:aniruddhaadak80@gmail.com" className="footer-link underline hover:text-yellow-300">aniruddhaadak80@gmail.com</a>
+    </p>
+</motion.div>
+
 
                 {/* Footer Bottom Section */}
                 <motion.div
