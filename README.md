@@ -87,7 +87,7 @@ Connect with others to share skills and knowledge in real-time. Book live sessio
 To get started with **SkillSphere**, clone the repository and install the necessary dependencies:
 
 ```bash
-git clone https://github.com/yourusername/skillsphere.git
+git clone https://github.com/aniruddhaadak80/SkillSphere.git
 cd skillsphere
 pip install -r requirements.txt
 ```
