@@ -1,11 +1,44 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'; // Import Link for client-side navigation
 import {
-    FaEnvelope, FaGithub, FaPaperPlane, FaRegSmile, FaTasks, FaHeart, FaRocket, FaLightbulb, FaMoon, FaUsers
+    FaEnvelope, FaGithub, FaPaperPlane, FaLightbulb, FaMoon
 } from 'react-icons/fa';
 import { IoMdRocket } from 'react-icons/io';
 import { Home, Activity, ChefHat, Leaf, Brain, Users, Map, HandHeart, Heart, LayoutDashboard, Share2 } from 'lucide-react';
+
+const THEME_STORAGE_KEY = 'skillsphere-theme';
+
+type Theme = 'light' | 'dark';
+
+/** Read the theme the visitor picked on an earlier visit. */
+function readStoredTheme(): Theme | null {
+    try {
+        const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
+        return stored === 'dark' || stored === 'light' ? stored : null;
+    } catch {
+        return null;
+    }
+}
+
+/** Remember the theme so it survives a reload. */
+function storeTheme(theme: Theme) {
+    try {
+        window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+    } catch {
+        // Storage can be unavailable (private mode, quota). The toggle still works.
+    }
+}
+
+/** The theme to start with: the stored choice, otherwise the system preference. */
+function initialTheme(): Theme {
+    const stored = readStoredTheme();
+    if (stored) return stored;
+    if (typeof window !== 'undefined' && typeof window.matchMedia === 'function') {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    return 'light';
+}
 
 const Footer = () => {
     const [email, setEmail] = useState('');
@@ -32,13 +65,21 @@ const Footer = () => {
         }
     };
 
+    // Restore the theme on the first paint so the toggle does not fight the
+    // stored choice and the page does not flash the wrong colours.
+    useEffect(() => {
+        const theme = initialTheme();
+        setIsDarkMode(theme === 'dark');
+        document.documentElement.classList.toggle('dark', theme === 'dark');
+    }, []);
+
     const toggleDarkMode = () => {
-        setIsDarkMode(!isDarkMode);
-        if (!isDarkMode) {
-            document.documentElement.classList.add('dark'); // Add dark mode class
-        } else {
-            document.documentElement.classList.remove('dark'); // Remove dark mode class
-        }
+        setIsDarkMode((previous) => {
+            const next = !previous;
+            document.documentElement.classList.toggle('dark', next);
+            storeTheme(next ? 'dark' : 'light');
+            return next;
+        });
     };
 
     const scrollToTop = () => {
@@ -157,7 +198,7 @@ const Footer = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.7 }}
                 >
-                    <p className="text-lg">&copy; 2024 Aniruddha Adak. All Rights Reserved.</p>
+                    <p className="text-lg">&copy; {new Date().getFullYear()} Aniruddha Adak. All Rights Reserved.</p>
                     <p className="mt-2 flex items-center gap-2">
                         GitHub Repository:
                         <a
