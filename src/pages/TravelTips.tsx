@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Star, Clock, Users, ThumbsUp } from 'lucide-react';
+import { MapPin, Star, ThumbsUp } from 'lucide-react';
 
 interface TravelTip {
   id: string;
