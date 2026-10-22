@@ -15,7 +15,7 @@ const recipes: Recipe[] = [
   {
     id: '1',
     title: 'Energizing Smoothie Bowl',
-    image: 'https://images.unsplash.com/photo-1546039907-7fa05f864c02',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=60',
     prepTime: '10 mins',
     servings: 2,
     mood: 'Energetic',
@@ -23,7 +23,7 @@ const recipes: Recipe[] = [
   {
     id: '2',
     title: 'Comforting Mac & Cheese',
-    image: 'https://images.unsplash.com/photo-1543339494-b4cd4f7ba686',
+    image: 'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=800&q=60',
     prepTime: '30 mins',
     servings: 4,
     mood: 'Comfort',
@@ -31,7 +31,7 @@ const recipes: Recipe[] = [
   {
     id: '3',
     title: 'Fresh Mediterranean Salad',
-    image: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe',
+    image: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=60',
     prepTime: '15 mins',
     servings: 2,
     mood: 'Fresh',
@@ -39,7 +39,7 @@ const recipes: Recipe[] = [
   {
     id: '4',
     title: 'Hearty Vegetable Soup',
-    image: 'https://images.unsplash.com/photo-1603052874026-25808408c7b1',
+    image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=60',
     prepTime: '25 mins',
     servings: 4,
     mood: 'Comfort',
@@ -47,7 +47,7 @@ const recipes: Recipe[] = [
   {
     id: '5',
     title: 'Zesty Quinoa Salad',
-    image: 'https://images.unsplash.com/photo-1506811512021-1b4b3d4c6e53',
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=60',
     prepTime: '20 mins',
     servings: 3,
     mood: 'Fresh',
@@ -55,7 +55,7 @@ const recipes: Recipe[] = [
   {
     id: '6',
     title: 'Savory Stuffed Peppers',
-    image: 'https://images.unsplash.com/photo-1602726586340-081c7d60a5bc',
+    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=60',
     prepTime: '40 mins',
     servings: 4,
     mood: 'Comfort',
@@ -63,7 +63,7 @@ const recipes: Recipe[] = [
   {
     id: '7',
     title: 'Simple Stir-Fried Noodles',
-    image: 'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0',
+    image: 'https://images.unsplash.com/photo-1578419997901-b409e7e400b8?auto=format&fit=crop&w=800&q=60',
     prepTime: '15 mins',
     servings: 2,
     mood: 'Energetic',
@@ -71,7 +71,7 @@ const recipes: Recipe[] = [
   {
     id: '8',
     title: 'Crispy Chickpea Tacos',
-    image: 'https://images.unsplash.com/photo-1586481080578-491f43b4ff63',
+    image: 'https://images.unsplash.com/photo-1464219222984-216ebffaaf85?auto=format&fit=crop&w=800&q=60',
     prepTime: '20 mins',
     servings: 3,
     mood: 'Fresh',
@@ -79,7 +79,7 @@ const recipes: Recipe[] = [
   {
     id: '9',
     title: 'Creamy Tomato Pasta',
-    image: 'https://images.unsplash.com/photo-1571002022760-e67e48167660',
+    image: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&q=60',
     prepTime: '30 mins',
     servings: 4,
     mood: 'Comfort',
@@ -87,7 +87,7 @@ const recipes: Recipe[] = [
   {
     id: '10',
     title: 'Delicious Berry Smoothie',
-    image: 'https://images.unsplash.com/photo-1542831371-c5c43c55f982',
+    image: 'https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&w=800&q=60',
     prepTime: '5 mins',
     servings: 2,
     mood: 'Energetic',
@@ -95,7 +95,7 @@ const recipes: Recipe[] = [
   {
     id: '11',
     title: 'Warm Lentil Salad',
-    image: 'https://images.unsplash.com/photo-1553883991-1c25e7b7e04d',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=60',
     prepTime: '25 mins',
     servings: 4,
     mood: 'Fresh',
@@ -103,7 +103,7 @@ const recipes: Recipe[] = [
   {
     id: '12',
     title: 'Coconut Curry Rice',
-    image: 'https://images.unsplash.com/photo-1584301608914-3c14d3deecb1',
+    image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=60',
     prepTime: '30 mins',
     servings: 3,
     mood: 'Comfort',
@@ -111,7 +111,7 @@ const recipes: Recipe[] = [
   {
     id: '13',
     title: 'Spicy Shrimp Tacos',
-    image: 'https://images.unsplash.com/photo-1528501460088-64f2fda63851',
+    image: 'https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=800&q=60',
     prepTime: '20 mins',
     servings: 2,
     mood: 'Energetic',
@@ -119,7 +119,7 @@ const recipes: Recipe[] = [
   {
     id: '14',
     title: 'Roasted Veggie Bowl',
-    image: 'https://images.unsplash.com/photo-1573481981962-69c1f42a7a80',
+    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=60',
     prepTime: '40 mins',
     servings: 4,
     mood: 'Fresh',
@@ -127,7 +127,7 @@ const recipes: Recipe[] = [
   {
     id: '15',
     title: 'Classic Beef Tacos',
-    image: 'https://images.unsplash.com/photo-1572410303220-4a48c8b6d82b',
+    image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=60',
     prepTime: '25 mins',
     servings: 2,
     mood: 'Comfort',
@@ -135,7 +135,7 @@ const recipes: Recipe[] = [
   {
     id: '16',
     title: 'Banana Oatmeal Pancakes',
-    image: 'https://images.unsplash.com/photo-1582111811308-3ccfbffec24b',
+    image: 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=800&q=60',
     prepTime: '15 mins',
     servings: 3,
     mood: 'Energetic',
@@ -143,7 +143,7 @@ const recipes: Recipe[] = [
   {
     id: '17',
     title: 'Tasty Quiche Lorraine',
-    image: 'https://images.unsplash.com/photo-1529111675423-94d4c6b4870e',
+    image: 'https://images.unsplash.com/photo-1650844010413-3f24dc1c182b?auto=format&fit=crop&w=800&q=60',
     prepTime: '50 mins',
     servings: 4,
     mood: 'Comfort',
@@ -151,7 +151,7 @@ const recipes: Recipe[] = [
   {
     id: '18',
     title: 'Green Smoothie Bowl',
-    image: 'https://images.unsplash.com/photo-1572042373674-9a431fa64b64',
+    image: 'https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&w=800&q=60',
     prepTime: '10 mins',
     servings: 2,
     mood: 'Fresh',
@@ -159,7 +159,7 @@ const recipes: Recipe[] = [
   {
     id: '19',
     title: 'Baked Salmon with Veggies',
-    image: 'https://images.unsplash.com/photo-1516409891440-7e865d508c4d',
+    image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=60',
     prepTime: '30 mins',
     servings: 3,
     mood: 'Energetic',
@@ -167,7 +167,7 @@ const recipes: Recipe[] = [
   {
     id: '20',
     title: 'Veggie-Packed Stir Fry',
-    image: 'https://images.unsplash.com/photo-1582841374203-19b185f26429',
+    image: 'https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=800&q=60',
     prepTime: '20 mins',
     servings: 4,
     mood: 'Fresh',
@@ -175,7 +175,7 @@ const recipes: Recipe[] = [
   {
     id: '21',
     title: 'One-Pan Chicken and Rice',
-    image: 'https://images.unsplash.com/photo-1616687811344-3c3543ec2bc0',
+    image: 'https://images.unsplash.com/photo-1617651523904-8768096faf40?auto=format&fit=crop&w=800&q=60',
     prepTime: '35 mins',
     servings: 4,
     mood: 'Comfort',
@@ -183,7 +183,7 @@ const recipes: Recipe[] = [
   {
     id: '22',
     title: 'Spaghetti Aglio e Olio',
-    image: 'https://images.unsplash.com/photo-1524702940256-df1b992f18f4',
+    image: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=60',
     prepTime: '20 mins',
     servings: 2,
     mood: 'Energetic',
@@ -191,7 +191,7 @@ const recipes: Recipe[] = [
   {
     id: '23',
     title: 'Garlic Butter Shrimp',
-    image: 'https://images.unsplash.com/photo-1584868324479-c7eb6d68b9d3',
+    image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=800&q=60',
     prepTime: '15 mins',
     servings: 2,
     mood: 'Fresh',
@@ -199,7 +199,7 @@ const recipes: Recipe[] = [
   {
     id: '24',
     title: 'Creamy Spinach Pasta',
-    image: 'https://images.unsplash.com/photo-1564566009161-7f164d546582',
+    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=60',
     prepTime: '25 mins',
     servings: 4,
     mood: 'Comfort',
@@ -207,7 +207,7 @@ const recipes: Recipe[] = [
   {
     id: '25',
     title: 'Fruit & Yogurt Parfait',
-    image: 'https://images.unsplash.com/photo-1600481360206-982b72fda02e',
+    image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=60',
     prepTime: '5 mins',
     servings: 1,
     mood: 'Energetic',
@@ -215,7 +215,7 @@ const recipes: Recipe[] = [
   {
     id: '26',
     title: 'Baked Ziti with Sausage',
-    image: 'https://images.unsplash.com/photo-1603052874026-25808408c7b1',
+    image: 'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=800&q=60',
     prepTime: '40 mins',
     servings: 4,
     mood: 'Comfort',
@@ -223,7 +223,7 @@ const recipes: Recipe[] = [
   {
     id: '27',
     title: 'Savory Pumpkin Soup',
-    image: 'https://images.unsplash.com/photo-1602352580737-9e6e6d634eeb',
+    image: 'https://images.unsplash.com/photo-1604152135912-04a022e23696?auto=format&fit=crop&w=800&q=60',
     prepTime: '30 mins',
     servings: 4,
     mood: 'Comfort',
@@ -231,7 +231,7 @@ const recipes: Recipe[] = [
   {
     id: '28',
     title: 'Greek Yogurt Dip',
-    image: 'https://images.unsplash.com/photo-1581383036235-7f5c9c1ed3fc',
+    image: 'https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&w=800&q=60',
     prepTime: '10 mins',
     servings: 4,
     mood: 'Fresh',
@@ -239,7 +239,7 @@ const recipes: Recipe[] = [
   {
     id: '29',
     title: 'Honey Garlic Chicken',
-    image: 'https://images.unsplash.com/photo-1582820301182-84c1ac303ec1',
+    image: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=800&q=60',
     prepTime: '30 mins',
     servings: 4,
     mood: 'Comfort',
@@ -247,7 +247,7 @@ const recipes: Recipe[] = [
   {
     id: '30',
     title: 'Sweet Potato Hash',
-    image: 'https://images.unsplash.com/photo-1544400542-5b1ffed28c36',
+    image: 'https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?auto=format&fit=crop&w=800&q=60',
     prepTime: '25 mins',
     servings: 3,
     mood: 'Energetic',
@@ -255,7 +255,7 @@ const recipes: Recipe[] = [
   {
     id: '31',
     title: 'Spiced Lentil Stew',
-    image: 'https://images.unsplash.com/photo-1584942032140-09b0c67dbec5',
+    image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=60',
     prepTime: '35 mins',
     servings: 4,
     mood: 'Comfort',
@@ -263,7 +263,7 @@ const recipes: Recipe[] = [
   {
     id: '32',
     title: 'Avocado Toast with Eggs',
-    image: 'https://images.unsplash.com/photo-1551786122-7a8d1523a9f1',
+    image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=60',
     prepTime: '10 mins',
     servings: 1,
     mood: 'Fresh',
@@ -271,7 +271,7 @@ const recipes: Recipe[] = [
   {
     id: '33',
     title: 'Mushroom Risotto',
-    image: 'https://images.unsplash.com/photo-1590212787522-c7f5b7a24be4',
+    image: 'https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=800&q=60',
     prepTime: '40 mins',
     servings: 4,
     mood: 'Comfort',
@@ -279,7 +279,7 @@ const recipes: Recipe[] = [
   {
     id: '34',
     title: 'Berry Chia Pudding',
-    image: 'https://images.unsplash.com/photo-1546468680-6b0f6d3d47d8',
+    image: 'https://images.unsplash.com/photo-1546039907-7fa05f864c02?auto=format&fit=crop&w=800&q=60',
     prepTime: '10 mins',
     servings: 2,
     mood: 'Energetic',
@@ -287,7 +287,7 @@ const recipes: Recipe[] = [
   {
     id: '35',
     title: 'Pasta Primavera',
-    image: 'https://images.unsplash.com/photo-1556937393-7c7e83dcb4c3',
+    image: 'https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=800&q=60',
     prepTime: '25 mins',
     servings: 4,
     mood: 'Fresh',
@@ -295,7 +295,7 @@ const recipes: Recipe[] = [
   {
     id: '36',
     title: 'Eggplant Parmesan',
-    image: 'https://images.unsplash.com/photo-1596770430213-dff3c0b1f17b',
+    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=60',
     prepTime: '50 mins',
     servings: 4,
     mood: 'Comfort',
@@ -303,7 +303,7 @@ const recipes: Recipe[] = [
   {
     id: '37',
     title: 'Beef Stir Fry',
-    image: 'https://images.unsplash.com/photo-1597611919622-df6af81f0b80',
+    image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=60',
     prepTime: '25 mins',
     servings: 4,
     mood: 'Energetic',
@@ -311,7 +311,7 @@ const recipes: Recipe[] = [
   {
     id: '38',
     title: 'Tropical Fruit Salad',
-    image: 'https://images.unsplash.com/photo-1583305760593-0cb84867dc99',
+    image: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=800&q=60',
     prepTime: '15 mins',
     servings: 3,
     mood: 'Fresh',
@@ -319,7 +319,7 @@ const recipes: Recipe[] = [
   {
     id: '39',
     title: 'Chicken Alfredo Pasta',
-    image: 'https://images.unsplash.com/photo-1577228189587-e0479da33802',
+    image: 'https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&w=800&q=60',
     prepTime: '30 mins',
     servings: 4,
     mood: 'Comfort',
@@ -327,7 +327,7 @@ const recipes: Recipe[] = [
   {
     id: '40',
     title: 'Lentil Burger',
-    image: 'https://images.unsplash.com/photo-1506790182087-3f21e54d2e43',
+    image: 'https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?auto=format&fit=crop&w=800&q=60',
     prepTime: '30 mins',
     servings: 2,
     mood: 'Energetic',
@@ -335,7 +335,7 @@ const recipes: Recipe[] = [
   {
     id: '41',
     title: 'Cabbage Roll Casserole',
-    image: 'https://images.unsplash.com/photo-1565772878946-c6bcd08f6e99',
+    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=60',
     prepTime: '60 mins',
     servings: 6,
     mood: 'Comfort',
@@ -343,7 +343,7 @@ const recipes: Recipe[] = [
   {
     id: '42',
     title: 'Quinoa & Black Bean Bowl',
-    image: 'https://images.unsplash.com/photo-1581851432340-379c31a64c54',
+    image: 'https://images.unsplash.com/photo-1613082410785-22292e8426e7?auto=format&fit=crop&w=800&q=60',
     prepTime: '20 mins',
     servings: 3,
     mood: 'Fresh',
@@ -351,7 +351,7 @@ const recipes: Recipe[] = [
   {
     id: '43',
     title: 'Peanut Butter Banana Smoothie',
-    image: 'https://images.unsplash.com/photo-1541231101517-51505b005b5a',
+    image: 'https://images.unsplash.com/photo-1638176066666-ffb2f013c7dd?auto=format&fit=crop&w=800&q=60',
     prepTime: '5 mins',
     servings: 1,
     mood: 'Energetic',
@@ -359,7 +359,7 @@ const recipes: Recipe[] = [
   {
     id: '44',
     title: 'Chicken and Broccoli Stir-Fry',
-    image: 'https://images.unsplash.com/photo-1584302601248-67be1d4ab1d3',
+    image: 'https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=800&q=60',
     prepTime: '20 mins',
     servings: 4,
     mood: 'Comfort',
@@ -367,7 +367,7 @@ const recipes: Recipe[] = [
   {
     id: '45',
     title: 'Veggie Sushi Rolls',
-    image: 'https://images.unsplash.com/photo-1550440686-1109a91c46cb',
+    image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=800&q=60',
     prepTime: '45 mins',
     servings: 4,
     mood: 'Fresh',
@@ -375,7 +375,7 @@ const recipes: Recipe[] = [
   {
     id: '46',
     title: 'Garlic Parmesan Potatoes',
-    image: 'https://images.unsplash.com/photo-1572378533637-2051ff37de69',
+    image: 'https://images.unsplash.com/photo-1568158879083-c42860933ed7?auto=format&fit=crop&w=800&q=60',
     prepTime: '30 mins',
     servings: 4,
     mood: 'Comfort',
@@ -383,7 +383,7 @@ const recipes: Recipe[] = [
   {
     id: '47',
     title: 'Caprese Salad Skewers',
-    image: 'https://images.unsplash.com/photo-1590430421466-5b2e05c6c2b3',
+    image: 'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?auto=format&fit=crop&w=800&q=60',
     prepTime: '15 mins',
     servings: 6,
     mood: 'Fresh',
@@ -391,7 +391,7 @@ const recipes: Recipe[] = [
   {
     id: '48',
     title: 'Stuffed Zucchini Boats',
-    image: 'https://images.unsplash.com/photo-1567306858415-a292c77b1e94',
+    image: 'https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?auto=format&fit=crop&w=800&q=60',
     prepTime: '30 mins',
     servings: 4,
     mood: 'Comfort',
@@ -399,7 +399,7 @@ const recipes: Recipe[] = [
   {
     id: '49',
     title: 'Peach Smoothie',
-    image: 'https://images.unsplash.com/photo-1562198119-925e785c8b4c',
+    image: 'https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?auto=format&fit=crop&w=800&q=60',
     prepTime: '5 mins',
     servings: 2,
     mood: 'Energetic',
@@ -407,7 +407,7 @@ const recipes: Recipe[] = [
   {
     id: '50',
     title: 'Roasted Beet Salad',
-    image: 'https://images.unsplash.com/photo-1608307522040-bb8ac8a22673',
+    image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=60',
     prepTime: '30 mins',
     servings: 4,
     mood: 'Fresh',
@@ -415,7 +415,7 @@ const recipes: Recipe[] = [
   {
     id: '51',
     title: 'Creamy Avocado Pasta',
-    image: 'https://images.unsplash.com/photo-1584113404044-d5c6d3a5d702',
+    image: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=60',
     prepTime: '20 mins',
     servings: 2,
     mood: 'Comfort',
@@ -423,7 +423,7 @@ const recipes: Recipe[] = [
   {
     id: '52',
     title: 'Baked Teriyaki Salmon',
-    image: 'https://images.unsplash.com/photo-1573479799143-0e4f20b4b5b2',
+    image: 'https://images.unsplash.com/photo-1732759959723-27f1ba1d1fa5?auto=format&fit=crop&w=800&q=60',
     prepTime: '25 mins',
     servings: 4,
     mood: 'Energetic',
@@ -431,7 +431,7 @@ const recipes: Recipe[] = [
   {
     id: '53',
     title: 'Vegetable Paella',
-    image: 'https://images.unsplash.com/photo-1590461408812-e20069b2a7a8',
+    image: 'https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=800&q=60',
     prepTime: '45 mins',
     servings: 4,
     mood: 'Fresh',
