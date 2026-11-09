@@ -1,3 +1,6 @@
+# Minimal default permissions for this workflow (CodeQL actions/missing-workflow-permissions).
+permissions: contents: read
+
 name: ci
 on:
   pull_request:
